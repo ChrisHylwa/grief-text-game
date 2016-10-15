@@ -1,5 +1,12 @@
 "Room Wodplay or Surrealist project" by Avita, Chris & Steph
 
+[Include Basic Help Menu by Emily Short.]
+
+[Include Secret Doors by Andrew Owen.]
+
+[Include Hidden Items by Krister Fundin.]
+
+
 
 Chapter 1 - Set-up
 
@@ -531,7 +538,7 @@ Every turn:
 					say "A door appears in the middle of the room. You open it, and seeing nothing unusual, you step through.".
 
 
-Chapter 3 - Bargaining
+Section 3 - Bargaining
 
 The B-Enter Room is a room. "As you arrive in the room, you suddenly feel like you've been drenched in water, even though you're completely dry. You shiver a little bit and look around, a rather plain and empty room surrounding you."
 The B-Exit Room is a room. "You hesitate before pushing your way into the darkness."
@@ -699,19 +706,9 @@ Instead of giving the Teddy Bear to the Dancer:
 	say "They snatch the bear from your arms, plopping it down next to their stereo system before giving you the shiny yellow gem. 'Thanks!' they sing 'You're a super nice person!'"
 
 
-Chapter 4 - Depression
+Section 4 - Depression
 
 D-Enter room is a room. "The entrance to depression."
-
-The Aroom is a room. "A room with plain, black walls. [bold type]'(1, 1)'[roman type] is painted on the ceiling in bold white letters."
-The Broom is a room. "A room with plain, black walls. [bold type]'(2, 1)'[roman type] is painted on the ceiling in bold white letters."
-The Croom is a room. "A room with plain, black walls. [bold type]'(3, 1)'[roman type] is painted on the ceiling in bold white letters."
-The Droom is a room. "A room with plain, black walls. [bold type]'(2, 1)'[roman type] is painted on the ceiling in bold white letters."
-The Eroom is a room. "A room with plain, black walls. [bold type]'(2, 2)'[roman type] is painted on the ceiling in bold white letters."
-The Froom is a room. "A room with plain, black walls. [bold type]'(2, 3)'[roman type] is painted on the ceiling in bold white letters." 
-The Groom is a room. "A room with plain, black walls. [bold type]'(3, 1)'[roman type] is painted on the ceiling in bold white letters."
-The Hroom is a room. "A room with plain, black walls. [bold type]'(3, 2)'[roman type] is painted on the ceiling in bold white letters."
-The Iroom is a room. "A room with plain, black walls. [bold type]'(3, 3)'[roman type] is painted on the ceiling in bold white letters."
 
 The Eroom is north of the Hroom and northeast of the Groom and east of the Droom and southeast of the Aroom and south of the Broom and southwest of the Croom and west of the Froom and northwest of the Iroom.
 The Aroom is north of the Droom and west of the Broom. 
@@ -720,15 +717,9 @@ The Groom is south of the Droom and west of the Hroom.
 The Iroom is south of the Froom and east of the Hroom.
 The Droom is east of the D-Enter room.
 
-The magic square conundrum is a puzzle. 
-
-The magic square diagram is a thing. The magic square diagram is in the Eroom. The description of the magic square diagram is "The diagram shows a 3x3 grid of squares. The middle square contains the number 5. There are lines across every row, column and diagonal, like an incredibly overcompensating game of tic-tac-toe. Next to the grid, the number 15 is written gigantically, and circled multiple times."
-
-The astronomy table is a thing. The astronomy table is hidden. On the astronomy table there is a model sun, a small model planet, and a giant model planet. The description of the table is "A huge circular table with a starry sky emblazoned on the top surface. There's a small model solar system standing on top, with a sun, a small blue planet and a large massive blue planet. It's not moving at the moment, but judging by the way it's set up, the giant planet is on a collision course with the smaller blue marble."
-
 A block is a kind of thing. A block is pushable between rooms. 
 Instead of taking a block, say "Good luck putting that giant cube of rock into your pocket. Maybe try pushing it instead."
-Instead of wearing a block, say "Much as you try, cannot wear the block."
+Instead of wearing a block, say "Much as you try,  cannot wear the block."
 
 Block A is in Droom. "A large heavy cube with the number 1 engraved on every face." 
 Block B is in Iroom.  Block B is fixed in place. "A large heavy cube with the number 2 engraved on every face."  Instead of pushing Block B, say "It doesn't want to be pushed."
@@ -741,13 +732,11 @@ Block H is in Aroom. Block H is fixed in place. "A large heavy cube with the num
 Block I is in Broom. "A large heavy cube with the number 9 engraved on every face."
 
 Every turn:
-	if Block A is in Broom and Block C is in Droom and Block G is in Froom and Block I is in Hroom:
-		if the magic square conundrum is unsolved:
-			now the magic square conundrum is solved;
-			remove Block E from play;
-			reveal astronomy table;
-			say "As the last block slides into place, you hear a low rumble coming from the center of the grid."
-
+	If Block A is in Broom:
+		If Block C is in Droom:
+			If Block G is in Froom:
+				If Block I is in Hroom:
+					say "DING".
 
 
 Section 5 - Acceptance
