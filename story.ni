@@ -110,7 +110,8 @@ Check an actor typing  the topic understood on something which is not a b-conv (
 	rule fails.
 
 Carry out an actor typing the topic understood on a b-conv (this is the default typing rule):
-	abide by the input handling rules for the b-conv. 
+	if the player can see a b-conv:
+		abide by the input handling rules for the b-conv. 
 
 The description of the b-conv is
 	"You see a screen labeled B-box with a keyboard next to the scratches. Its keyboard only has the alphabet and the digits 0 - 9.
@@ -252,7 +253,7 @@ Carry out an actor stabbing something (called the target) with something (this i
 	if the target is a painting begin;
 		remove painting from play;
 		reveal the wall;
-		 say "As you turn towards the painting, you hear a faint whisper, [italic type] Et tu, Brute? [roman type] You realize that what you thought was Caesar is actually a re-animated corpse crossing the river Styx. This strengthens your desire to wield the knife."
+		 say "As you turn towards the painting, you hear a faint whisper, [italic type] Et tu, Brute? [roman type] You realize that what you thought was Caesar is actually a re-animated corpse crossing the river Styx. This strengthens your desire to wield the knife.";
 		 say "[line break]You stab the corpse over and over again until its shredded remains scatter on the floor. The frame breaks, dragging the crumbling leftovers down with it. You see a faded patch where the painting once was. Scribbled on the wall is: O6GOCEEE 28 31 in some reddish pigment.";
 		now the description of the wall is  "Scribbled on the faded wall is: O6GOCEEE 28 31. [line break]";
 		say "[line break]You see a screen labeled B-Box displaying a keyboard next to the embedded scratches. The only keys present are the alphabet and the digits 0 - 9.
@@ -270,7 +271,7 @@ Understand "break [something]" as breaking.
 Breaking is an action applying to one visible thing. 
 
 Carry out an actor breaking something (called the target):
-		if the target is the player, say "You have to intact pieces of yourself to further break down.";
+		if the target is the player, say "You have no intact pieces of yourself to further break down.";
 		if the target is the pot begin;
 			say "In the dusty, smoked-strewn room, amidst the broken pieces of a once intact thing, lies the pot's useless corpse. Was that really necessary?";
 			remove pot from play;
@@ -301,46 +302,55 @@ To say help:
 
 Section 1 - Anger Room
 
-Rrt room is a room with the printed name "Room".  "As you enter the next room, the air waftes with the sickling stench of gore, but you don't see any damage. The walls are
+Rrt room is a room with the printed name "Room".  "As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are
 	bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before..."
-Rrt room is south of Anger room.
-Rrw room is a room with the printed name "Room". "As you enter the next room, the air waftes with the sickling stench of gore, but you don't see any damage. The walls are
+Rrw room is a room with the printed name "Room". "As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are
 	bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before..."
-Rrw room is east of Rrq room.
-Rrq room is a room with the printed name "Room". "As you enter the next room, the air waftes with the sickling stench of gore, but you don't see any damage. The walls are
+Rrq room is a room with the printed name "Room". "As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are
 	bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before..."
-Rrq  room is south of Rrt room.
-Rrr room is a room with the printed name "Room". "As you enter the next room, the air waftes with the sickling stench of gore, but you don't see any damage. The walls are
+Rrr room is a room with the printed name "Room". "As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are
 	bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before..."
-Rrr room is south of Rrq room.
 
 To say help:
 	say "Examine everything."
 	
-The Anger Room is a room with the printed name "As you enter the next room, you smell blood and taste the gnarling cacaphoney of a broken record. Splashes of dried blood cover the walls; everything in the room is sinking and stained. You see your hands. They are red to your wrists, and you can't remove it. You feel nausceous, and start hyperventilating. You struggle through dark spots and white flashes, eventually renouncing sight altogether. You trip on something squishy. You can't get up, and the squishyness is crawling up your
+rand_num is a number that varies.
+
+A thing can be tranquil or violent
+
+The Anger Room is a room with the printed name "Room[line break]As you enter the next room, you smell blood and taste the gnarling cacaphoney of a broken record. Splashes of dried blood cover the walls; everything in the room is sinking and stained. You see your hands. They are red to your wrists, and you can't remove it. You feel nausceous, and start hyperventilating. You struggle through dark spots and white flashes, eventually renouncing sight altogether. You trip on something squishy. You can't get up, and the squishyness is crawling up your
 leg. You wish you had your knife. You hate this. You hate this so much. You hate this enough to grab the thing and squeeze and squeeze until it cracks and you throw it against the bloody wall and walk over to it and stomp it to bits. You notice tiny globs emerging from the carcass and oozing towards you. You run back to the old door and open it, tears blotching your vision.
 [paragraph break]".
 
-A thing can be tranquil or violent.
+.
 
 The anger emotion is hidden and violent in the Anger room.
 
 Every turn: 
-	If the player is in the Anger room, move player to Rrq room.
+	If the player is in the Anger room:
+		now rand_num is a random number from 1 to 4;
+		if rand_num is 1:
+			move the player to Rrq room;
+		else if rand_num is 2:
+			move the player to the Rrw room;
+		else if rand_num is 3:
+			move the player to the Rrr room;
+		else if rand_num is 4:
+			move the player to the Rrt room.
 
 A thing can be examined. 
 A thing can be on or off.
 
-The qdoor is hidden in the Rrq room. The printed name of the qdoor is "random door".  
+The qdoor is hidden in the Rrq room. The printed name of the qdoor is "random door". 
 The wdoor is hidden in the Rrw room. The printed name of the wdoor is "random door".
 The rdoor is  hidden in the Rrr room. The printed name of the rdoor is "random door". 
 The tdoor is hidden in the Rrt room. The printed name of the tdoor is "random door".
 
 Understand "random door" as qdoor or wdoor or rdoor or tdoor.
-Understand "stuffed animal" or "stuffed bear" as qstuffed animal or rstuffed animal or tstuffed animal or wstuffed animal.
-Understand "sailboat" as qsailboat or rsailboat or tsailboat or wsailboat.
-Understand "photographs" as qphotographs or rphotographs or tphotographs or wphotographs.
-Understand "switch" as qswitch or rswitch or tswitch or wswitch.
+Understand "stuffed animal" or "stuffed bear" or "bear" or "animal" as qstuffed animal or rstuffed animal or tstuffed animal or wstuffed animal.
+Understand "sailboat" or "sail" or "boat" as qsailboat or rsailboat or tsailboat or wsailboat.
+Understand "photographs" or "photo" or "photograph" or "image" or "photos" or "images" as qphotographs or rphotographs or tphotographs or wphotographs.
+Understand "switch" or "hidden switch" as qswitch or rswitch or tswitch or wswitch.
 
 The qstuffed animal is untakable and not examined in the Rrq room.  The printed name of the qstuffed animal is "stuffed bear".
 The qphotographs are untakable and not examined in the Rrq room.  The printed name of the qphotographs are "photograph".
@@ -381,14 +391,14 @@ Instead of examining rdoor:
 
 Instead of examining tdoor:
 	if player is in Rrt:
-		say "Inscribd on the door is randoor".
+		say "Inscribed on the door is randoor".
 
 
 
-rand_num is a number that varies.
+
 Carry out an actor randooring :
-	if qdoor is revealed:
-		if player is in Rrq:
+	if player is in Rrq:
+		if qdoor is revealed:
 			now rand_num is a random number from 1 to 4;
 			if rand_num is 1:
 				move player to Rrw;
@@ -398,30 +408,30 @@ Carry out an actor randooring :
 				move player to Rrr;
 			else if rand_num is 4:
 				move player to Rrt;
-	else if wdoor is revealed:
-		if player is in Rrw:
-			now rand_num is a random number from 1 to 4;
-			if rand_num is 1:
-				move player to Rrq;
-			else if rand_num is 2:
-				move player to Rrr;
-			else if rand_num is 3:
-				move player to Rrr;
-			else if rand_num is 4:
-				move player to Rrt;
-	else if rdoor is revealed:
-		if player is in Rrr:
+	else if player is in Rrw:
+		if wdoor is revealed:
 			now rand_num is a random number from 1 to 4;
 			if rand_num is 1:
 				move player to Rrq;
 			else if rand_num is 2:
+				move player to Rrr;
+			else if rand_num is 3:
+				move player to Rrr;
+			else if rand_num is 4:
+				move player to Rrt;
+	else if player is in Rrr:
+		if rdoor is revealed:
+			now rand_num is a random number from 1 to 4;
+			if rand_num is 1:
+				move player to Rrq;
+			else if rand_num is 2:
 				move player to Rrw;
 			else if rand_num is 3:
 				move player to Rrt;
 			else if rand_num is 4:
 				move player to Rrt;
-	else if tdoor is revealed:
-		if player is in Rrt:
+	else if player is in Rrt:
+		if tdoor is revealed:
 			now rand_num is a random number from 1 to 4;
 			if rand_num is 1:
 				move player to Rrq;
@@ -517,22 +527,22 @@ Instead of examining examined tphotographs:
 
 Instead of examining a not examined qsailboat:
 	if player is in Rrq:
-		 say "You see a sailboat and are reminded of your dreams of escaping this dreary world.";
+		 say "You see a sailboat and reminisce on your dreams of escaping this dreary world.";
 		now the qsailboat is examined.
 
 Instead of examining a not examined wsailboat:
 	if player is in Rrw:
-		 say "You see a sailboat and are reminded of your dreams of escaping this dreary world.";
+		 say "You see a sailboat and reminisce on your dreams of escaping this dreary world.";
 		now the wsailboat is examined.
 
 Instead of examining a not examined rsailboat:
 	if player is in Rrr:
-		 say "You see a sailboat and are reminded of your dreams of escaping this dreary world.";
+		 say "You see a sailboat and reminisce on your dreams of escaping this dreary world.";
 		now the rsailboat is examined.
 	
 Instead of examining a not examined tsailboat:
 	if player is in Rrt:
-		 say "You see a sailboat and are reminded of your dreams of escaping this dreary world.";
+		 say "You see a sailboat and reminisce on your dreams of escaping this dreary world.";
 		now the tsailboat is examined.
 		
 
@@ -560,27 +570,35 @@ Every turn:
 					reveal qswitch;
 					say "You uncovered a hidden switch and random door!";
 					reveal qdoor;
-	else if the wswitch is hidden:
+					now the qdoor is undescribed;
+					now the qswitch is undescribed;
+	if the wswitch is hidden:
 		if the wsailboat is examined:
 			if the wphotographs is examined:
 				if the wstuffed animal is examined:
 					reveal wswitch;
+					now the wswitch is undescribed;
 					say "You uncovered a hidden switch and random door!";
 					reveal wdoor;
-	else if the rswitch is hidden:
+					now the wdoor is undescribed;
+	if the rswitch is hidden:
 		if the rsailboat is examined:
 			if the rphotographs is examined:
 				if the rstuffed animal is examined:
 					reveal rswitch;
+					now the rswitch is undescribed;
 					say "You uncovered a hidden switch and random door!";
 					reveal rdoor;
-	else if the tswitch is hidden:
+					now the rdoor is undescribed;
+	if the tswitch is hidden:
 		if the tsailboat is examined:
 			if the tphotographs is examined:
 				if the tstuffed animal is examined:
 					reveal tswitch;
+					now the tswitch is undescribed;
 					say "You uncovered a hidden switch and random door!";
-					reveal tdoor.
+					reveal tdoor;
+					now the tdoor is undescribed.
 		
 
 Understand the command "switch" as something new.
@@ -588,7 +606,8 @@ Understand "switch [something]" as switching.
 Switching is an action applying to one visible thing. 
 Understand the command "hit" as something new.
 Understand the command "flick" as something new.
-Understand the commands "flick" and "hit" as "switch".
+Understand the command "flip" as something new.
+Understand the commands "flick" and "hit" and "flip" as "switch".
 
 Carry out an actor switching something (called the target):
 	if the target is a qswitch:
@@ -661,27 +680,41 @@ Instead of examining a tswitch:
 Every turn:
 	if the anger is violent:
 		if the qswitch is on:
-			if the wswitch is on:
-				if the rswitch is on:
-					if the tswitch is on:
-						say "A door appears in the middle of the room. You open it, and seeing nothing unusual, you step through. But you go nowhere and are still in the room. Frustration builds as you bang your head against the frame. You plead to make the world stop. You close your eyes and fall backwards, giving up. Yet you miss the ground and feel yourself being transported upwards.";
-						now the anger is tranquil;
-						move player to the B-Enter room.
+			if the qdoor is revealed:
+				if the wswitch is on:
+					if the wdoor is revealed:
+						if the rswitch is on:
+							if the rdoor is revealed:
+								if the tswitch is on:
+									if the tdoor is revealed:
+										say "A door appears in the middle of the room. You open it, and seeing nothing unusual, you step through. But you go nowhere and are still in the room. Frustration builds as you bang your head against the frame. You plead to make the world stop. You close your eyes and fall backwards, giving up. Yet you miss the ground and feel yourself being transported upwards.";
+										now the anger is tranquil;
+										move player to the B-Enter room.
 
 
 Chapter 3 - Bargaining
 
 The B-Enter Room is a room. "As you arrive in the room, you suddenly feel like you've been drenched in water, even though you're completely dry. You shiver a little bit and look around, a rather plain and empty room surrounding you."
 The B-Exit Room is a room. "You hesitate before pushing your way into the darkness."
-The Red Room is a room.  "A room whose walls are a vivid scarlet. There's a blue door to the south, and a yellow door to the east."
-The Blue Room is a room.  "A room whose walls are a deep cerulean. There's a red door to the north and a green door to the east." 
-The Green Room is a room.  "A room whose walls are a vibrant jade. There's a blue door to the west and a yellow door to the north."
-The Yellow Room is a room.  "A room whose walls are a beautiful shade of gold. There's a green door to the south, and a red door to the west."
-The Mirrored Red Room is a room. "A room whose walls are a faded crimson. There's a blue door with cracked paint to the south and a scratched yellow door to the west."
-The Mirrored Blue Room is a room.  "A room whose walls are a unsettling cobalt. There's a faded red door to the north and a swirling green door to the west."
-The Mirrored Green Room is a room.  "A room whose walls are a overwhelming veridian. There's a blue door with cracked paint to the east, and a scratched yellow door to the north."
-The Mirrored Yellow Room is a room.  "A room whose walls are a sickening mustard. There's a faded red door to the east, and a swirling green door to the south."
-The Altar is a room. "A gray room whose walls look closer to stone than all the other rooms you've been in. There's an altar here with a glinting gold ring resting on top of it. There appear to be four diamond-shaped impressions in the altars face." 
+The Red Room is a room.  "A room whose walls are a vivid scarlet. There's a cerulean door to the south, and a gold door to the east."
+The Blue Room is a room.  "A room whose walls are a deep cerulean. There's a scarlet door to the north and a jade door to the east." 
+The Green Room is a room.  "A room whose walls are a vibrant jade. There's a cerulean door to the west and a gold door to the north."
+The Yellow Room is a room.  "A room whose walls are a beautiful shade of gold. There's a jade door to the south, and a scarlet door to the west."
+The Mirrored Red Room is a room. "A room whose walls are a faded crimson. There's a cobalt door with cracked paint to the south and a scratched mustard door to the west."
+The Mirrored Blue Room is a room.  "A room whose walls are a unsettling cobalt. There's a faded crimson door to the north and a swirling veridian door to the west."
+The Mirrored Green Room is a room.  "A room whose walls are a overwhelming veridian. There's a cobalt door with cracked paint to the east, and a scratched mustard door to the north."
+The Mirrored Yellow Room is a room.  "A room whose walls are a sickening mustard. There's a faded crimson door to the east, and a swirling veridian door to the south."
+The Altar is a room. "A graywashed room whose walls look closer to stone than all the other rooms you've been in. An altar dedicated to no deity consumes the room. A glinting gold ring appears to be the only offering. There are four diamond-shaped impressions in the altar's face." 
+
+Understand the command "pray" as something new.
+Understand "pray" as praying.
+Praying is an action applying to nothing.
+
+To say help:
+	say "Ask person about something".
+
+Carry out an actor praying:
+	say "You pray with all your might and energy, but nothing comes of it.".
 
 The iron door is a secret door. The iron door is north of The Altar and south of the B-Exit Room.
 
@@ -689,9 +722,9 @@ The Red Room is north of the Blue Room and west of the Yellow Room. The Green ro
 
 The Mirrored Red Room is north of the Mirrored Blue Room and east of the Mirrored Yellow Room. The Mirrored Green Room is south of the Mirrored Yellow room and west of the Mirrored Blue Room. The Altar is east of the Mirrored Blue Room. The B-Exit Room is north of the iron door.
 
-The mystic mirror is in the Storeroom. "You spot an ornate silver mirror, with a strange, not-quite oval shape. Looking at its surface, you almost feel like you could fall into it's silvery depths. The handle looks strange, almost like an over-sized key."
-The bag of rice is in the Mirrored Red Room. "There's a large brown bag with the word 'RICE' stamped across it sits, looking a bit lopsided, but otherwise complete."
-The bouquet is in the Mirrored Green Room. "On a slightly askew shelf is a  large bouquet of various flowers, an incredibly eye-catching flurry of colors. Despite the number of flowers, the scent of the bundle is quite weak. A bit of dew sparkles on each of the petals."
+The mystic mirror is in the Storeroom. "You spot an ornate silver mirror, with a flickering, almost-oval shape. Looking at its surface, you feel like you could vanish into it's steely depths. The handle is peculiar, like an over-sized key."
+The bag of rice is in the Mirrored Red Room. "There's a heavy rustic bag with 'RICE' stamped across it, looking lopsided, yet complete in its drudgery."
+The bouquet is in the Mirrored Green Room. "On an askew shelf is an enoumously large bouquet of flowers, in an incredibly eye-catching flurry of colors. The scent of the bundle is quite weak, and a bit of dew sparkles on each of the petals."
 The teddy bear is in the Mirrored Blue Room. "A soft plush teddy bear missing an eye. You dislike the bear immensly despite the desparate bear's pleas to love it."
 The gold ring is in the Altar. "A lovingly crafted gold ring, well-worn yet shiny. Its lived countless seasons of warmth that you never had."
 The sapphire shard is in the Mirrored Yellow Room. "A sparkling diamond-shaped blue gemstone shard."
@@ -708,10 +741,13 @@ Understand "rice" or "bag of rice" or "rice bag" as Bag of Rice.
 Understand "bear" or "stuffed bear" or "teddy bear" or "teddie bear" or "stuffed animal" or "plush bear" or "plush" as Teddy Bear.
 Understand "bouquet" or "flowers" or "bouquet of flowers" or "flower bouquet" as Bouquet.
 Understand "ring" or "band" or "gold ring" as Gold Ring.
-
+Understand "wine" or "bottle" or "drink" or "alcohol" as Wine Bottle.
 A thing can be solved or unsolved. A puzzle is a kind of thing. A puzzle is unsolved. The gem cypher is a puzzle. The mirror cypher is a puzzle.
 
 Using is an action applying to one visible thing. Understand "use [something]" as using.
+
+
+[Understand "ask" as "say".]
 
 The blue gem slot is a container in the Altar. The blue gem slot has carrying capacity 1.
 The red gem slot is a container in the Altar. The red gem slot has carrying capacity 1.
@@ -724,52 +760,54 @@ Every turn:
 		if the gem cypher is unsolved:
 			now the gem cypher is solved;
 			reveal key slot;
-			say "The shards glow and reveal a large slot in the top of the altar. It almost looks like a large keyhole from here."
+			say "The shards glow and reveal a large slot on top of the altar. It seems like a large keyhole from here."
 			
 Every turn:
 	If the key slot contains the mystic mirror:
 		If the mirror cypher is unsolved:
 			now the mirror cypher is solved;
 			reveal iron door;
-			say "A part of the north wall slides back to reveal an ancient iron door. There's a broken window in the iron portal, and only darkness beyond."
+			say "A part of the north wall slides back to reveal an ancient iron slab. There's a broken window in the metal, and only darkness beyond.
+				Desireing to remove yourself as far as possibe from these ghosts, you climb through the glass and drag yourself upwards.";
+			move player to D-enter room.
 			
 
 Instead of examining or using the mirror:
 	If the location of the player is:
 		-- the Red Room:
-			say "You stare into the mirror, entranced by its deep silver surface. When you look up again, the room has changed.";
+			say "You stare into the mirror, entranced by its mezmerizing silvery-red. When you look up again, the room has changed.";
 			now the player is in the Mirrored Red Room;
 		-- the Blue Room:
-			say "You stare into the mirror, entranced by its deep silver surface. When you look up again, the room has changed.";
+			say "You stare into the mirror, hearing the waves of a forgotten coast. When you look up again, the room has changed.";
 			now the player is in the Mirrored Blue Room;
 		-- the Green Room:
-			say "You stare into the mirror, entranced by its deep silver surface. When you look up again, the room has changed.";
+			say "You stare into the mirror, seeing earthy shadows battle for your attention. When you look up again, the room has changed.";
 			now the player is in the Mirrored Green Room;
 		-- the Yellow Room:
-			say "You stare into the mirror, entranced by its deep silver surface. When you look up again, the room has changed.";
+			say "You stare into the mirror, blinded and hurt by its light. When you look up again, the room has changed.";
 			now the player is in the Mirrored Yellow Room;
 		-- the Mirrored Red Room:
-			say "You stare into the mirror, entranced by its deep silver surface. When you look up again, the room has changed.";
+			say "You stare into the mirror, entranced by the flecks of blood appearing on your face. When you look up again, the room has changed.";
 			now the player is in the Red Room;
 		-- the Mirrored Blue Room:
-			say "You stare into the mirror, entranced by its deep silver surface. When you look up again, the room has changed.";
+			say "You stare into the mirror, seeing yourself suffocate. When you look up again, the room has changed.";
 			now the player is in the Blue Room;
 		-- the Mirrored Green Room:
-			say "You stare into the mirror, entranced by its deep silver surface. When you look up again, the room has changed.";
+			say "You stare into the mirror, hearing the wails of the burried dead. When you look up again, the room has changed.";
 			now the player is in the Green Room;
 		-- the Mirrored Yellow Room:
-			say "You stare into the mirror, entranced by its deep silver surface. When you look up again, the room has changed.";
+			say "You stare into the mirror, feeling yourself combust into oblivion. When you look up again, the room has changed.";
 			now the player is in the Yellow Room;
 		-- otherwise:
-			say "You stare into the mirror for quite some time. When you look up, you feel a bit light-headed, but otherwise fine.";
+			say "You stare into the mirror; the mirror stares back. When you can look away again, you feel a bit light-headed, but otherwise 'fine'.";
 			
 Instead of showing something to someone, try giving the noun to the second noun.
 		
-The Author is a person in the Red Room. The Author is carrying the Ruby Shard.  "You recognize the man here as the Author in the photographs. He's more lanky than you remember, wearing an ill-fitting pair of pants and a white button down shirt covered in coffee stains. His gaunt face with rough stubble and boodshot eyes haunts your vision. He's stumbling around the room murmuring to himself, searching for nothing."
+The Author is a person in the Red Room. The Author is carrying the Ruby Shard.  "You recognize the man here as the Author in the photographs. He's more lanky than you remember, wearing an ill-fitting pair of pants and a white button down collared shirt covered in coffee stains. His gaunt face with rough stubble and boodshot eyes haunts your vision. He's stumbling around the room murmuring to himself, searching for nothing."
 
-Before asking or answering the Author about something:
+Before asking the Author about something:
 	if the Author does not carry the wine:
-		say "The Author's eyes are glazed and don't recognize your existence. He shambles randomly across the room muttering'i need.. where is is is is i ..want..thirst..empty..so so empty..please..'. His left hand is cut; he grasps something sharp and red in his right hand.";
+		say "The Author's eyes are glazed and don't recognize your existence. He shambles randomly across the room muttering 'i need.. where is is is is i ..want..thirst..empty..so so empty..please..'. His left hand is cut; he grasps something sharp and red in his right hand.";
 	else:
 		say "The man drowns in alcohol before patronizingly answering you in a suitably drunk and cryptic manner. You realize that he is a shade, an automatron disguised as the person you once knew. His jerkish expressions and overwhelming nonsensical routine make more sense coming from a non-entity. Disappointing, though. You can't get any closure from a metal robot."
 		
@@ -786,7 +824,7 @@ Instead of giving the Wine bottle to the Author:
 
 The Beautician is a person in the Green Room. The Beautician is carrying the Emerald Shard. "Your old beautician is standing next to a hair-dressing station, looking dour as usual. She's a world-weary, dangerously thin woman, wielding a pair of blindingly razor sharp scissors. As she hears your footsteps, she smothers a shocked expression before breaking into an almost grin. 'Heh. Never thought I'd see your mug again, not after... You're not forgiven, and as I suspect, neither am I. So leave. We have nothing more to say to each other, not anymore."
 
-After asking or answering the Beautician about "[Emerald Shard]", say "She nods. 'After everything, you still want more from me? Every ounce that is pure and precious for you to crush. No...no i can't, not again. Why are you here? Can't you disappear away as you always do? Leave."
+After asking the Beautician about "[Emerald Shard]", say "She nods. 'After everything, you still want more from me? Every ounce that is pure and precious for you to crush. No...no i can't, not again. Why are you here? Can't you disappear away as you always do? Leave."
 
 Instead of taking the emerald shard, say "The Beautician snips her scissors menacingly, despite that shakey grin. You know not to try her temper."
 
@@ -805,25 +843,27 @@ Instead of giving the gold ring to the Beautician:
 	move the gold ring to the beautician;
 	say "''Mother's ring!? Where did you...? That's not possible..' You know the ring burned, but you promised to be better in order to see it wielded again. Although she's not the one you requested, the Beautician needs the kindness and heat of the ring more than you do. You delicately place the ring in her hands, as she marvels at you.";
 	if the Beautician does not have the bouquet:
-		say "'I...I can't believe...' Tears well up in her eyes, yet never fall. She's too distracted to notice any requests. Perhaps she will awknowledge your existence again if you give her something else.";
+		say "'I...I can't believe...' Tears well up in her eyes, yet never fall. She's too distracted to notice any requests. Perhaps she will acknowledge your existence again if you give her something else.";
 	otherwise if the Beautician has the bouquet:
 		move the Emerald Shard to the player;
 		say "The Beautician darkly smiles. 'Of course it's this that carves an inkling of regret and forgiveness in my veins...but I can't, you know that. Let us be done after this.' As the Beautician drops the scarred green shard into your outstretched palm, her sleeve rides up and you see the wires sustaining her existence. Despite your pain and good sense, you still wish desperately that she was really her. "		
 
-The Cook is a person in the Blue Room. The Cook is carrying the wine bottle. "It's the Cook! A jovial, chubby, woman, wearing an apron and a pristine souz-chef hat. Upon noticing you, she sounds a hearty chuckle! 'Well hello! What can I get you tonight?'"
+The Cook is a person in the Blue Room. The Cook is carrying the wine bottle. "It's the Cook who made the captured bread. A jovial, chubby, woman, wearing an apron and a pristine souz-chef hat. Upon noticing you, she sounds a hearty chuckle. 'Well, hello dear! Fancy seein['] you back after stormin['] off in that dramatic nonsense of yours. Knew you'd be back, though. You always come back to me, don't you dearie? Now come closer, I've just been whippin['] up your favorite dish! Missn['] somethin['] though, can't remember what...always missin['] somethin[']...'[line break]You know better than to trust her fake warmth and can now see her web of manipulations starting to tangle you inwards. You keep your distance; you plead internally to garner the strength to resist."
 
-After asking Cook about "[Wine Bottle]", say "She shakes her head. 'Nu-uh. Not today! I need that for later. But if you want me to pull out another bottle, maybe you can help me out by getting some rice for sushi night?' She grins. 'Gotta call in a favor from you every once in a while.'"
+After asking Cook about "[Wine Bottle]", say "She scoffs at you. 'Is this a bad joke? I know you've seen the gouges on me made from the madness of drink. I'll forgive you
+						dearie, but don't make me get out my rollin['] pin! Ah, all those good times with you and that pin. Remember all the fun we had--you eatin['] my muffins and puffs and danishes? Cryin['] out for no more, but of course I knew you could still eat. If only that devilish mongress hadn't stolen you away from me, but I knew you'd come back. Good thin['] she's gone now, isn't dear? Knew she had it comin['] for her--they always do, those ones. Kinda sad, the way she burned, but oh well. What can you do, you know? Good thin['] I ain't afraid of no flame!"
 	
-Instead of taking the wine bottle, say "The Cook catches your hand with a smirk. 'Sorry, but I really need this bottle. I can get you a different bottle if you help me out though."
+Instead of taking the wine bottle, say "Your hand passes though the bottle. You're not corporeal enough to find a grip. You need to leave before the Cook acknowledges you again."
 
-After asking the Cook about "me", say  "They look at you curiously. 'Sorry, I don't know anything about that!'"
+After asking the Cook about "me", say  "Oh dearie, dearie, dearie me! Have you forgotten about yourself again? Come closer, and I'll weave you back together, and we will 	always be together dearie. Always.'[line break]You find yourself, and run."
 	
 Instead of giving the Bag of Rice to the Cook:
 	move the Bag of Rice to the Cook;
 	move the Wine Bottle to the player;
-	say "As soon as she sees that huge bag of rice, she gins, grabbing it and lifting it off your arms like it weighed absolutely nothing. She sets it down next to the counter. 'Well, that's your end of the bargain! Now for mine!' She dissappears into thin air, only to reappear a few seconds later holding a large bottle of wine. She hands it to you carefully. 'Be careful with that stuff. It's super potent.'"
+	say "As soon as she sees that huge bag of rice, she grins, grabbing it and lifting it off your arms like it weighed absolutely nothing. You now realize she is a spider in human clothing. Her webs are sticking to you. You grab the wine bottle and slice away the slimey strings and chords, like that man did before you. Still feeling her machinations crawl under your skin, you flee.'";
+	move player to the Green room.
 
-The Dancer is a person in the Yellow Room. The Dancer is carrying the Topaz Shard.  "You don't recognize the Dancer here, but they still seem familiar. They're young, and of ambiguous gender, grinning as they dance about in a pair of sneakers. A large shard of yellow topaz lies on the blanket next to their stereo system."
+The Dancer is a person in the Yellow Room. The Dancer is carrying the Topaz Shard.  "You don't recognize the Dancer here, but they still seem familiar, like a child you knew now changed and disillusioned. Yet, they are laughing and spinning away in a pair of old sneakers, defiant in spite of the world and its monsters. Or at least, pretending to escape from it all. A dulled piece of topaz lies on a ripped blanket next to their stereo system."
 
 After asking the Dancer about "[Topaz Shard]", say "They think about it for a moment before answering your question. 'Hmmm... maybe if you find Buster for me, I'll give it to you!' They nod, as if they're agreeing with themselves as they continue dancing to the energetic beat behind them. "
 
@@ -839,7 +879,7 @@ Instead of giving the Teddy Bear to the Dancer:
 
 Chapter 4 - Depression
 
-D-Enter room is a room. "The entrance to depression."
+D-Enter room is a room. "You enter a room with classy white marble floors, and a tar coating on the walls."
 
 The Aroom is a room. "A room with plain, black walls. [bold type]'(1, 1)'[roman type] is painted on the ceiling in bold white letters."
 The Broom is a room. "A room with plain, black walls. [bold type]'(2, 1)'[roman type] is painted on the ceiling in bold white letters."
@@ -864,9 +904,10 @@ The magic square diagram is a thing. The magic square diagram is in the Eroom. T
 
 The astronomy table is a thing. The astronomy table is hidden. On the astronomy table there is a model sun, a small model planet, and a giant model planet. The description of the table is "A huge circular table with a starry sky emblazoned on the top surface. There's a small model solar system standing on top, with a sun, a small blue planet and a large massive blue planet. It's not moving at the moment, but judging by the way it's set up, the giant planet is on a collision course with the smaller blue marble."
 
+
 A block is a kind of thing. A block is pushable between rooms. 
-Instead of taking a block, say "Good luck putting that giant cube of rock into your pocket. Maybe try pushing it instead."
-Instead of wearing a block, say "Much as you try, cannot wear the block."
+Instead of taking a block, say "Good luck putting that giant cube of granite into your pocket. Try pushing it instead."
+Instead of wearing a block, say "Much as you try, you cannot wear the block."
 
 Block A is in Droom. "A large heavy cube with the number 1 engraved on every face." 
 Block B is in Iroom.  Block B is fixed in place. "A large heavy cube with the number 2 engraved on every face."  Instead of pushing Block B, say "It doesn't want to be pushed."
@@ -910,4 +951,4 @@ The story creation year is 2016.
 
 Release along with an interpreter, the introductory booklet, a file of "Beyond Acceptance image" called "Beyond Acceptance.jpg" and a file of "Wind sounds" called "22331__black-boe__wind.ogg".
 
-test me with "look note / check picture / take apple / put apple in pot / take knife / stab caesar / ".
+test me with "look note / check picture / take apple / put apple in pot / take knife / stab caesar / input o6goceee 28 31 / break pot / make door".
