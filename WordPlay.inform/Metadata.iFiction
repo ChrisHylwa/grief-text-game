@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ifindex version="1.0" xmlns="http://babel.ifarchive.org/protocol/iFiction/">
+    <story>
+        <identification>
+            <ifid>676938C5-CE16-4BA7-B913-B3D51F945CF1</ifid>
+            <format>glulx</format>
+        </identification>
+        <bibliographic>
+            <title>Tower of Happiness</title>
+            <author>Avita, Chris &amp; Steph</author>
+            <headline>An Interactive Fiction</headline>
+            <genre>Puzzle</genre>
+            <firstpublished>2016</firstpublished>
+            <language>en</language>
+            <group>Inform</group>
+        </bibliographic>
+        <resources>
+            <auxiliary>
+                <leafname>Beyond Acceptance.jpg</leafname>
+                <description>Beyond Acceptance image</description>
+            </auxiliary>
+            <auxiliary>
+                <leafname>22331__black-boe__wind.ogg</leafname>
+                <description>Wind sounds</description>
+            </auxiliary>
+        </resources>
+        <cover>
+            <format>png</format>
+            <height>241</height>
+            <width>209</width>
+            <description>The cover art.</description>
+        </cover>
+        <releases>
+            <attached>
+                <release>
+                    <releasedate>2016-10-21</releasedate>
+                    <version>1</version>
+                    <compiler>Inform 7</compiler>
+                    <compilerversion>6M62</compilerversion>
+                </release>
+            </attached>
+        </releases>
+        <colophon>
+            <generator>Inform 7</generator>
+            <generatorversion>6M62</generatorversion>
+            <originated>2016-10-21</originated>
+        </colophon>
+        <glulx>
+            <serial>161021</serial>
+            <release>1</release>
+            <compiler>Inform 7 build 6M62</compiler>
+            <coverpicture>1</coverpicture>
+        </glulx>
+    </story>
+</ifindex>
