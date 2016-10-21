@@ -1,24 +1,29 @@
 "Room Wodplay or Surrealist project" by Avita, Chris & Steph
 
-[Include Basic Help Menu by Emily Short.]
-
-[Include Secret Doors by Andrew Owen.]
-
-[Include Hidden Items by Krister Fundin.]
-
 
 
 Chapter 1 - Set-up
 
-Section 1 
+Section 1 - Synonyms
+
+Figure of Acceptance is the file "Beyond Acceptance.jpg". 
+Sound of wind is the file "22331__black-boe__wind.ogg".
+
+Include Multiple Sounds by Massimo Stella.
+When play begins: display the Figure of Acceptance; play the Sound of wind in background with loop.
+
 
 Help is an action applying to nothing. Understand "help" or "HELP" or "Help"  or "help me" or
-"HELP ME" or "Help me" as help. 
+"HELP ME" or "Help me" or "I need help" as help. 
 Carry out help: 
 	say "[help][paragraph break]"
 	
 To say help:
-	say "You can Interact or Examine name of object".
+	say "Remember to look at stuff, or move to different rooms using: n, s, e, w".
+
+Understand "look for [something]" as examining.
+Understand the command "check" as something new.
+Understand the command "check" as "look"
 
 Section 2 - Hidden and untakable Items
 
@@ -78,6 +83,67 @@ Before doing something to a secret door which is hidden:
 Before doing something when a secret door is the second noun and the second noun is hidden:
 	say the door doesn't exist message instead.
 	
+Section 4 - Base Converter (not really)
+
+[Waits for user input, then converts the number to the desired base]
+Include Version 5 of Glulx Text Effects by Emily Short.
+Input handling rules are an object-based rulebook.
+
+The B-conv is a thing. The printed name  of b-conv is "B-box". Understand "B-box" or "bbox" as B-conv.
+
+Understand the command "type" as something new.
+Understand the command "enter" as something new.
+Understand "type [text] into/on [a b-conv]" as typing it on. Understand "type [text] on/into [something]" as typing it on. Typing it on is an action applying to one topic and one thing.
+Understand "type [text]" as typing it on.
+
+Understand the commands "key" and "input" and "enter" as "type".
+
+Rule for supplying a missing second noun while typing the topic understood on (this is the guess a keyboard while typing rule):
+	if the player can see a b-conv:
+		now the second noun is b-conv.
+
+Check an actor typing  the topic understood on something which is not a b-conv (this is the reject typing on non-keyboards rule):
+	if the actor is the player:
+		say "You can't type that." instead;
+	rule fails.
+
+Carry out an actor typing the topic understood on a b-conv (this is the default typing rule):
+	abide by the input handling rules for the b-conv. 
+
+The description of the b-conv is
+	"You see a screen labeled B-box with a keyboard next to the scratches. Its keyboard only has the alphabet and the digits 0 - 9.
+		  The screen pulsates with 'WAITING FOR INPUT'.".
+
+The b-conv has some text called default response. The default response of a b-conv is usually "Incorrect input.".
+
+Table of User Styles (continued)
+style name	justification	italic	indentation	first line indentation	font weight	color 
+special-style-1	left-justified	false	15	15	bold-weight	"#000000"
+
+A input handling rule for a b-conv:
+	let N be indexed text;
+	let N be "[the topic understood]";
+	if N matches the regular expression "<a-zA-Z0-9>* (<2-9>|<1-2><0-9>|3<0-6>) (<2-9>|<1-2><0-9>|3<0-6>)$":
+		let Num be word number 1 in N in upper case;
+		let mybase be word number 2 in N;
+		let newbase be word number 3 in N; 
+		if Num is "O6GOCEEE":
+			if mybase is "28":
+				if newbase is "31":
+					say "The screen whirls for a few seconds, then outputs:[line break]    [special-style-1]       
+						     B[line break]     R[line break]     E[line break]     A[line break]     K[line break]     P[line break]     O[line break]     T";
+					rule succeeds;
+		say "The screen whirls for a few seconds, then outputs a series of digits. You recognize the output as [Num] in base [mybase] converted to base [newbase]:";
+		rule succeeds;
+	otherwise if N matches the regular expression "<a-zA-Z0-9>* (<2-9>|<1-2><0-9>|3<0-6>)$":
+		say "Missing Number";
+		rule fails;
+	otherwise if N matches the regular expression "<a-zA-Z0-9>* (<2-9>|<1-2><0-9>|3<7-9>) (<2-9>|<1-2><0-9>|3<7-9>)$":
+		say "Out of Range";
+		rule fails;
+	say "Incorrect Input";
+	rule fails.
+	
 Chapter 2 - Story 
 
 Section 1 - Denial Door and Puzzle setup
@@ -98,6 +164,8 @@ The oak door is a secret door. The oak door is east of The Denial Room and north
 
 A note is untakable in the Denial room.
 
+A b-conv is untakable and hidden in the Denial room.
+
 Count is a number that varies.
 
 Count is 0.
@@ -105,10 +173,10 @@ Count is 0.
 Instead of examining a note:
 	if Count is 0 begin;
 		say   "+--------------------------------------+[line break]
-			| Look for painting; Uifsf jt bo boomf. | [line break]
-			|                                                                 | [line break]
-			| _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ | [line break]
-			+--------------------------------------+";
+			   | Look for painting; Uifsf jt bo boomf. | [line break]
+			   |                                                                 | [line break]
+			   | _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ | [line break]
+			   +--------------------------------------+";
 			reveal the painting of Julius Caesar;
 			now the description of the painting of Julius Caesar is "A painting of Julius Caesar glares at you. He is crossing the Rubicon to Rome in the West.";
 	end if;
@@ -183,10 +251,13 @@ Carry out an actor stabbing something (called the target) with something (this i
 		remove painting from play;
 		reveal the wall;
 		 say " You hear a faint whisper, [italic type] Et tu, Brute? [roman type]";
-		 say "[line break]You stabbed the painting over and over again until the shredded remains of *INSERT* scatter on the floor. The frame breaks, dragging the crumbling leftovers down with it. You see a faded patch where the painting once was. Scribbled on the wall is: O6GOCEEE in 28 to 31";
+		 say "[line break]You stabbed the painting over and over again until the shredded remains of *INSERT* scatter on the floor. The frame breaks, dragging the crumbling leftovers down with it. You see a faded patch where the painting once was. Scribbled on the wall is: O6GOCEEE 28 31.";
 		now the description of the wall is  "Scribbled on the faded wall is: O6GOCEEE in 28 to 31. [line break]";
-		 say "[line break]The knife's blade breaks, and disappears among the scraps. The knife now has no purpose.";
-		 remove knife from play;
+		say "[line break]You see a screen labeled B-Box with a keyboard next to the scratches. Its keyboard only has the alphabet and the digits 0 - 9.
+		  The screen pulsates with 'WAITING FOR INPUT'.";
+		say "[line break]The knife's blade breaks, and disappears among the scraps. The knife now has no purpose.";
+		reveal the b-conv;
+		remove knife from play;
 	end if;
 	if the target is not a painting begin;
 		if the target is not a person,
@@ -242,6 +313,10 @@ The Anger Room is a room with the printed name "As you enter the next room, you 
 leg. You wish you had your knife. You hate this. You hate this so much. You hate this enough to grab the thing and squeeze and squeeze until it cracks and you throw it against the bloody wall and walk over to it and stomp it to bits. You notice tiny globs emerging from the carcass and oozing towards you. You run back to the old door and open it.
 [paragraph break]".
 
+A thing can be tranquil or violent.
+
+The anger emotion is hidden and violent in the Anger room.
+
 Every turn: 
 	If the player is in the Anger room, move player to Rrq room.
 
@@ -253,32 +328,31 @@ The wdoor is hidden in the Rrw room. The printed name of the wdoor is "random do
 The rdoor is  hidden in the Rrr room. The printed name of the rdoor is "random door". It is undescribed.
 The tdoor is hidden in the Rrt room. The printed name of the tdoor is "random door". It is undescribed.
 
-
 Understand "random door" as qdoor or wdoor or rdoor or tdoor.
 Understand "stuffed animal" or "stuffed bear" as qstuffed animal or rstuffed animal or tstuffed animal or wstuffed animal.
 Understand "sailboat" as qsailboat or rsailboat or tsailboat or wsailboat.
 Understand "photographs" as qphotographs or rphotographs or tphotographs or wphotographs.
 Understand "switch" as qswitch or rswitch or tswitch or wswitch.
 
-The qstuffed animal is a thing which is not examined in the Rrq room.  The printed name of the qstuffed animal is "stuffed bear".
-qphotographs are things which are not examined in the Rrq room.  The printed name of the qphotographs are "photographs".
-A qsailboat is a thing which is not examined in the Rrq room. The printed name of the qsailboat is "sailboat".
-A qswitch is hidden in the Rrq room. The printed name of the qswitch is "switch". It is undescribed.
+The qstuffed animal is untakable and not examined in the Rrq room.  The printed name of the qstuffed animal is "stuffed bear".
+The qphotographs are untakable and not examined in the Rrq room.  The printed name of the qphotographs are "photographs".
+The qsailboat is untakable and not examined in the Rrq room. The printed name of the qsailboat is "sailboat".
+The qswitch is hidden and untakable in the Rrq room. The printed name of the qswitch is "switch". It is undescribed.
 
-The wstuffed animal is not examined in the Rrw room.  The printed name of the wstuffed animal is "stuffed bear".
-wphotographs are not examined in the Rrw room.  The printed name of the wphotographs are "photographs".
-A wsailboat is not examined in the Rrw room. The printed name of the wsailboat is "sailboat".
-A wswitch  is hidden in the Rrw room. The printed name of the wswitch is "switch". It is undescribed.
+The wstuffed animal is untakable and not examined in the Rrw room.  The printed name of the wstuffed animal is "stuffed bear".
+wphotographs are untakable and not examined in the Rrw room.  The printed name of the wphotographs are "photographs".
+A wsailboat is untakable and not examined in the Rrw room. The printed name of the wsailboat is "sailboat".
+A wswitch  is untakable and hidden in the Rrw room. The printed name of the wswitch is "switch". It is undescribed.
 
-The rstuffed animal is not examined in the Rrr room.  The printed name of the rstuffed animal is "stuffed bear".
-rphotographs are not examined in the Rrr room.  The printed name of the rphotographs are "photographs".
-A rsailboat is not examined in the Rrr room. The printed name of the rsailboat are "sailboat".
-A rswitch  is hidden in the Rrr room. The printed name of the rswitch is "switch". It is undescribed.
+The rstuffed animal is untakable and not examined in the Rrr room.  The printed name of the rstuffed animal is "stuffed bear".
+rphotographs are untakable and not examined in the Rrr room.  The printed name of the rphotographs are "photographs".
+A rsailboat is untakable and not examined in the Rrr room. The printed name of the rsailboat are "sailboat".
+A rswitch  is untakable and hidden in the Rrr room. The printed name of the rswitch is "switch". It is undescribed.
 
-The tstuffed animal is not examined in the Rrt room.  The printed name of the tstuffed animal is "stuffed bear".
-tphotographs are not examined in the Rrt room.  The printed name of the tphotographs are "photographs".
-A tsailboat is not examined in the Rrt room. The printed name of the tsailboat is "sailboat".
-A tswitch is hidden in the Rrt room. The printed name of the tswitch is "switch". It is undescribed.
+The tstuffed animal is untakable and not examined in the Rrt room.  The printed name of the tstuffed animal is "stuffed bear".
+tphotographs are untakable and not examined in the Rrt room.  The printed name of the tphotographs are "photographs".
+A tsailboat is untakable and not examined in the Rrt room. The printed name of the tsailboat is "sailboat".
+A tswitch is untakable and hidden in the Rrt room. The printed name of the tswitch is "switch". It is undescribed.
 
 
 Understand the command "randoor" as something new.
@@ -309,7 +383,7 @@ Carry out an actor randooring :
 		if player is in Rrq:
 			now rand_num is a random number from 1 to 4;
 			if rand_num is 1:
-				move player to Rrq;
+				move player to Rrw;
 			else if rand_num is 2:
 				move player to Rrw;
 			else if rand_num is 3:
@@ -322,7 +396,7 @@ Carry out an actor randooring :
 			if rand_num is 1:
 				move player to Rrq;
 			else if rand_num is 2:
-				move player to Rrw;
+				move player to Rrr;
 			else if rand_num is 3:
 				move player to Rrr;
 			else if rand_num is 4:
@@ -335,7 +409,7 @@ Carry out an actor randooring :
 			else if rand_num is 2:
 				move player to Rrw;
 			else if rand_num is 3:
-				move player to Rrr;
+				move player to Rrt;
 			else if rand_num is 4:
 				move player to Rrt;
 	else if tdoor is revealed:
@@ -348,7 +422,7 @@ Carry out an actor randooring :
 			else if rand_num is 3:
 				move player to Rrr;
 			else if rand_num is 4:
-				move player to Rrt.	
+				move player to Rrq.	
 		
 
 Instead of examining a not examined qstuffed animal:
@@ -363,15 +437,15 @@ Instead of examining a not examined wstuffed animal:
 		say "You see a dilapitated stuffed bear. As you inch closer to it, the bear's open maw snaps shut. Its hollow eyes follow you throughout the room.";
 		say "[line break]Your hand is aching; the pain throbs with every step taken away from the bear. It slowly spreads to your chest as your rage builds. You punch
 		       the bear in the jar with your damaged fist---you hear the crunch, but can't feel it. You pummel it again and again until you can feel something. The bear is
-                       no more.";
+					   no more.";
 		now the wstuffed animal is examined.
 	
 Instead of examining a not examined rstuffed animal:
 	if player is in Rrr:
 		say "You see a dead bear. Its red fluffiness is speckled with deep, brownish white scabs. Its hollow eyes follow you throughout the room";
 		say "[line break]Your eyes are aching; the pain throbs with every step taken away from the bear. It slowly spreads down your face to your fists as your rage builds. 
-                        You punch the bear in the jar with your damaged fist---you hear something break, but can't feel it. You pummel it again and again until you can feel something.
-                        The eyes are saved for last. [italic type] Crunch. Crunch. Crunch. [roman type] Tasty.";
+						You punch the bear in the jar with your damaged fist---you hear something break, but can't feel it. You pummel it again and again until you can feel something.
+						The eyes are saved for last. [italic type] Crunch. Crunch. Crunch. [roman type] Tasty.";
 		now the rstuffed animal is examined.
 
 Instead of examining a not examined tstuffed animal:
@@ -394,14 +468,14 @@ Instead of examining an examined tstuffed animal:
 Instead of examining not examined qphotographs:
 	if player is in Rrq:
 		 say "You see a man surrounded by bookshelves sitting on a desk with mountains of papers--both coffee stained and gold-trimmed. His insiduous grin mocks
-                         your incompetence, yet you still feel respect for him. You want his acknowledgment as much as you want to destroy him. Instead, you take pleasure in ripping
-                         his image to shreds." ;
+						 your incompetence, yet you still feel respect for him. You want his acknowledgment as much as you want to destroy him. Instead, you take pleasure in ripping
+						 his image to shreds." ;
 		now the qphotographs are examined.
 
 Instead of examining not examined wphotographs:
 	if player is in Rrw:
 		say "Your eyes catch the eyes of a woman in pink tones sharpely smiling. Your finger traces the curves of her face, circling around until you land on her head. You
-                        can now appreciate her temper, and wish you could start over with her again. But she does not deserve that, not any more. You methodically cut her in half.";
+						can now appreciate her temper, and wish you could start over with her again. But she does not deserve that, not any more. You methodically cut her in half.";
 		now the wphotographs are examined.
 
 Instead of examining not examined rphotographs:
@@ -501,44 +575,82 @@ Every turn:
 					say "You uncovered a hidden switch and random door!";
 					reveal tdoor.
 		
+
+Understand the command "switch" as something new.
+Understand "switch [something]" as switching.
+Switching is an action applying to one visible thing. 
+Understand the command "hit" as something new.
+Understand the command "flick" as something new.
+Understand the commands "flick" and "hit" as "switch".
+
+Carry out an actor switching something (called the target):
+	if the target is a qswitch:
+		if player is in Rrq:
+			 say "You flipped the switch on";
+			now the qswitch is on;
+			now the wswitch is on;
+			now the tswitch is off;
+			now the rswitch is off;	
+	if the target is a wswitch:
+		if player is in Rrw:
+			say "You flipped the switch on";
+			now the wswitch is on;
+			now the tswitch is off;
+			now the qswitch is off;
+			now the rswitch is on;
+	if the target is a rswitch:
+		if player is in Rrr:
+			say "You flipped the switch on";
+			now the wswitch is off;
+			now the qswitch  is off;
+			now the rswitch  is on;
+	if the target is a tswitch:
+		if player is in Rrt:
+			say "You flipped the switch on";
+			now the tswitch  is on;
+			now the qswitch is on.
 		
+
 Instead of examining a qswitch:
 	if player is in Rrq:
-		 say "You flipped the switch on";
-		now the qswitch is on;
-		now the wswitch is on;
-		now the tswitch is off;
-		now the rswitch is off.
+		if the qswitch is on:
+			say "The switch is on";
+		if the qswitch is off:
+			say "The switch is off".
 		
 Instead of examining a wswitch:
 	if player is in Rrw:
-		say "You flipped the switch on";
-		now the wswitch is on;
-		now the tswitch is off;
-		now the rswitch is on.
+		if the wswitch is on:
+			say "The switch is on";
+		if the wswitch is off:
+			say "The switch is off".
 
 Instead of examining a rswitch:
 	if player is in Rrr:
-		say "You flipped the switch on";
-		now the wswitch is off;
-		now the tswitch  is off;
-		now the rswitch  is on.
+		if the rswitch is on:
+			say "The switch is on";
+		if the rswitch is off:
+			say "The switch is off".
 
 Instead of examining a tswitch:
 	if player is in Rrt:
-		say "You flipped the switch on";
-		now the tswitch  is on;
-		now the qswitch is on.
+		if the tswitch is on:
+			say "The switch is on";
+		if the tswitch is off:
+			say "The switch is off".
 
 Every turn:
-	if the qswitch is on:
-		if the wswitch is on:
-			if the rswitch is on:
-				if the tswitch is on:
-					say "A door appears in the middle of the room. You open it, and seeing nothing unusual, you step through.".
+	if the anger is violent:
+		if the qswitch is on:
+			if the wswitch is on:
+				if the rswitch is on:
+					if the tswitch is on:
+						say "A door appears in the middle of the room. You open it, and seeing nothing unusual, you step through.";
+						now the anger is tranquil;
+						move player to the B-Enter room.
 
 
-Section 3 - Bargaining
+Chapter 3 - Bargaining
 
 The B-Enter Room is a room. "As you arrive in the room, you suddenly feel like you've been drenched in water, even though you're completely dry. You shiver a little bit and look around, a rather plain and empty room surrounding you."
 The B-Exit Room is a room. "You hesitate before pushing your way into the darkness."
@@ -706,9 +818,19 @@ Instead of giving the Teddy Bear to the Dancer:
 	say "They snatch the bear from your arms, plopping it down next to their stereo system before giving you the shiny yellow gem. 'Thanks!' they sing 'You're a super nice person!'"
 
 
-Section 4 - Depression
+Chapter 4 - Depression
 
 D-Enter room is a room. "The entrance to depression."
+
+The Aroom is a room. "A room with plain, black walls. [bold type]'(1, 1)'[roman type] is painted on the ceiling in bold white letters."
+The Broom is a room. "A room with plain, black walls. [bold type]'(2, 1)'[roman type] is painted on the ceiling in bold white letters."
+The Croom is a room. "A room with plain, black walls. [bold type]'(3, 1)'[roman type] is painted on the ceiling in bold white letters."
+The Droom is a room. "A room with plain, black walls. [bold type]'(2, 1)'[roman type] is painted on the ceiling in bold white letters."
+The Eroom is a room. "A room with plain, black walls. [bold type]'(2, 2)'[roman type] is painted on the ceiling in bold white letters."
+The Froom is a room. "A room with plain, black walls. [bold type]'(2, 3)'[roman type] is painted on the ceiling in bold white letters." 
+The Groom is a room. "A room with plain, black walls. [bold type]'(3, 1)'[roman type] is painted on the ceiling in bold white letters."
+The Hroom is a room. "A room with plain, black walls. [bold type]'(3, 2)'[roman type] is painted on the ceiling in bold white letters."
+The Iroom is a room. "A room with plain, black walls. [bold type]'(3, 3)'[roman type] is painted on the ceiling in bold white letters."
 
 The Eroom is north of the Hroom and northeast of the Groom and east of the Droom and southeast of the Aroom and south of the Broom and southwest of the Croom and west of the Froom and northwest of the Iroom.
 The Aroom is north of the Droom and west of the Broom. 
@@ -717,9 +839,15 @@ The Groom is south of the Droom and west of the Hroom.
 The Iroom is south of the Froom and east of the Hroom.
 The Droom is east of the D-Enter room.
 
+The magic square conundrum is a puzzle. 
+
+The magic square diagram is a thing. The magic square diagram is in the Eroom. The description of the magic square diagram is "The diagram shows a 3x3 grid of squares. The middle square contains the number 5. There are lines across every row, column and diagonal, like an incredibly overcompensating game of tic-tac-toe. Next to the grid, the number 15 is written gigantically, and circled multiple times."
+
+The astronomy table is a thing. The astronomy table is hidden. On the astronomy table there is a model sun, a small model planet, and a giant model planet. The description of the table is "A huge circular table with a starry sky emblazoned on the top surface. There's a small model solar system standing on top, with a sun, a small blue planet and a large massive blue planet. It's not moving at the moment, but judging by the way it's set up, the giant planet is on a collision course with the smaller blue marble."
+
 A block is a kind of thing. A block is pushable between rooms. 
 Instead of taking a block, say "Good luck putting that giant cube of rock into your pocket. Maybe try pushing it instead."
-Instead of wearing a block, say "Much as you try,  cannot wear the block."
+Instead of wearing a block, say "Much as you try, cannot wear the block."
 
 Block A is in Droom. "A large heavy cube with the number 1 engraved on every face." 
 Block B is in Iroom.  Block B is fixed in place. "A large heavy cube with the number 2 engraved on every face."  Instead of pushing Block B, say "It doesn't want to be pushed."
@@ -732,11 +860,13 @@ Block H is in Aroom. Block H is fixed in place. "A large heavy cube with the num
 Block I is in Broom. "A large heavy cube with the number 9 engraved on every face."
 
 Every turn:
-	If Block A is in Broom:
-		If Block C is in Droom:
-			If Block G is in Froom:
-				If Block I is in Hroom:
-					say "DING".
+	if Block A is in Broom and Block C is in Droom and Block G is in Froom and Block I is in Hroom:
+		if the magic square conundrum is unsolved:
+			now the magic square conundrum is solved;
+			remove Block E from play;
+			reveal astronomy table;
+			say "As the last block slides into place, you hear a low rumble coming from the center of the grid."
+
 
 
 Section 5 - Acceptance
@@ -747,10 +877,16 @@ The Staircase is a room. "The stairs dissappear behind you. The walls are gettin
 
 The Upper Landing is a room. "The light is white, warm. There's a hole in the roof here to let the light in, with a ladder leading upwards."
 
-The End is a room. "Welcome back.[paragraph break]THE END."
+The End is a room. "Welcome back.[paragraph break]THE END." 
 
 Credits is a room. "Thank you for playing!"
 
 The Staircase is above The Tower. Below The Staircase is nowhere. 
 The Upper Landing is above The Staircase. Below the Upper Landing is nowhere.
 The End is above the Upper Landing. Below the Upper Landing is nowhere. Below The End is nowhere.
+
+The story headline is "An Interactive Fiction".
+The story genre is "Puzzle". 
+The story creation year is 2016. 
+
+Release along with an interpreter, the introductory booklet, a file of "Beyond Acceptance image" called "Beyond Acceptance.jpg" and a file of "Wind sounds" called "22331__black-boe__wind.ogg".
