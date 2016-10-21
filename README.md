@@ -1,3 +1,3 @@
-﻿#Text Adventure Game
+﻿#Tower of Happiness
 
-A rather unnassuming text adventure game. To get started, just ask for help.
+A rather unnassuming interactive fiction game. To get started, just ask for help.
