@@ -1,40 +1,6 @@
 /*
 
-CSS file for an Inform 7 website template. This has been modified to
-provide a single column of fixed width (600px), with a header and
-footer.
-
-Created by Andrew Plotkin (erkyrath@eblong.com). These template files
-are in the public domain.
-
-The header is fixed at 72 pixels high. To change this height, edit
-edit the four CSS lines labelled "header height" (in style.css) from
-"72px" to whatever value you choose.
-
-The footer, similarly, is fixed at 48 pixels high. Edit the
-"footer height" lines to change this.
-
-Note that in the "play.html" file, the home-page and download links
-are in the header rather than in the content div.
-
-Also note that the "index.html" and "source.html" files use relative
-positioning for the header, content, and footer. The "play.html" file
-uses absolute positioning. This is because the document pages need a
-document scroll bar (for example, for long source text listings),
-whereas the gameplay page must *not* have a document scroll bar -- all
-game scrolling occurs in the gameport div.
-
-A consequence is that if the document pages *aren't* long (the index.html
-usually isn't) then the footer can appear rather high up. If you don't 
-like this, you can delete the footer entirely on those pages. Just delete
-the footer stanza from index.html and source.html:
-
-<div id="pagefooter"><div id="subfooter">
-  ...
-</div></div>
-
-You can also delete the footer from play.html. In that case, you will
-also have to reduce the footer height to 0px.
+Standard CSS file for use with Standard.html and Standard-Source.html. 
 
 */
 
@@ -44,109 +10,11 @@ body
 	font-family: Georgia, Palatino, "Times New Roman", Times, serif;
 	font-size: 100%;
 	-webkit-text-size-adjust: none;
-
-	margin: 0px;
-	top: 0px;
-	bottom: 0px;
-	width: 100%;
-	background: white;
-	color: black;
 }
-
-/* Used in index.html and source.html. */
-#pageheader {
-	width: 100%;
-	top: 0px;
-	height: 72px; /* header height */
-	margin: 0px;
-	background: #EEE; /* this color fills the header, all the way across */
-}
-
-/* Used in play.html. */
-#header {
-	position: absolute;
-	width: 100%;
-	top: 0px;
-	height: 72px; /* header height */
-	margin: 0px;
-	background: #EEE; /* this color fills the header, all the way across */
-}
-
-/* Used in all pages -- defines the width. */
-#subheader {
-	position: relative;
-	width: 600px; /* column width */
-	height: 100%;
-	margin: auto;
-	/* a background color here will fill the header at a width of 600px */
-}
-
-/* Used in index.html and source.html. */
-#pagefooter {
-	width: 100%;
-	height: 48px; /* footer height */
-	margin: 0px;
-	margin-top: 2em;
-	background: #EEE; /* this color fills the footer, all the way across */
-}
-
-/* Used in play.html. */
-#footer {
-	position: absolute;
-	width: 100%;
-	bottom: 0px;
-	height: 48px; /* footer height */
-	margin: 0px;
-	background: #EEE; /* this color fills the footer, all the way across */
-}
-
-/* Used in all pages -- defines the width. */
-#subfooter {
-	position: relative;
-	width: 600px; /* column width */
-	height: 100%;
-	margin: auto;
-	/* a background color here will fill the footer at a width of 600px */
-}
-
-/* 
-This class is used for the sample header and footer text. You can replace it
-with your own CSS classes. 
-*/
-.framelabel {
-	padding-top: 1em;
-	font-size: 14px;
-	font-style: italic;
-}
-
-
-/* Used in index.html and source.html. */
-#pagecolumn {
-	width: 100%;
-	top: 72px; /* header height */
-	margin: 0px;
-}
-
-/* Used in play.html. */
-#column {
-	position: absolute;
-	width: 100%;
-	top: 72px; /* header height */
-	bottom: 48px; /* footer height */
-	margin: 0px;
-}
-
-/* Used in all pages -- defines the width. */
-#subcolumn {
-	position: relative;
-	width: 600px; /* column width */
-	height: 100%;
-	margin: auto;
-}
-
 
 .container
 {
+	margin-top: 2em;
 }
 
 /* 
@@ -187,10 +55,12 @@ a:hover
 
 .coverimage
 {
-	margin-top: 3em;
-	margin-right: 1em;
+	width: 12.6em;
+	margin-top: 2em;
+	margin-left: 1em;
+	float: left;
+	clear: left;
 	text-align: right;
-	float: right;
 } 
 
 /* 
@@ -221,7 +91,8 @@ To change the appearance of specific elements, tweak
 .introduction
 { 
 	padding-top: 2.4em;
-	margin-left: 1em;
+	margin-left: 15.4em;
+	width: 33em;
 	line-height: 1;
 	text-align: left;
 }
@@ -237,7 +108,7 @@ to represent the game, we need only add the line "display: none;" to the
 definition of h1.
 
 */
-h1 { font-size: 2em; }
+h1 { font-size: 2em;  }
 h2 { font-size: 1em; line-height: .25;}
 
 /* The about formatting applies to blurb information. */
@@ -245,7 +116,8 @@ h2 { font-size: 1em; line-height: .25;}
 .about
 {
 	margin-top: 2.8em;
-	margin-left: 1em;
+	margin-left: 15.4em;
+	width: 33em;
 	text-align: left;
 }
 
@@ -269,7 +141,8 @@ the IFID for the game and suggests interpreters for the author to use. */
 
 .playinfo
 {
-	margin: 1em 0px 0px 1em;
+	margin: 1em 0px 0px 15.4em;
+	width: 33em;
 }
 
 .playinfo p {
@@ -286,7 +159,11 @@ side of the page.
 
 .links
 {
-	font-size: 0.8em;
+	width: 13em;
+	float: left;
+	clear: left;
+	text-align: right; 
+	margin-top: 2.8em;
 }
 
 .links li
@@ -303,7 +180,7 @@ surrounding text. In order to get rid of them entirely, we would add
 "display: none;" to our filetype definition. 
 */ 
 
-span.filetype { font-size: .75em; }
+span.filetype { font-size: .5em; }
 
 /* 
 Source formatting applies to the source text on generated pages. 
@@ -312,13 +189,15 @@ Source formatting applies to the source text on generated pages.
 .source
 {
 	margin-top: 1.4em;
-	margin-left: 1em;
+	margin-left: 15.4em;
+	width: 33em;
 	line-height: 1.4;
 }
 
 .sourceintroduction
 {
-	margin-left: 1em;
+	margin-left: 15.4em;
+	width: 33em;
 }
 
 .sourceintroduction h1
@@ -339,10 +218,12 @@ Source formatting applies to the source text on generated pages.
 
 .sourcecoverimage
 {
-	margin-top: 1em;
+	width: 12.6em;
+	margin-top: 2em;
 	margin-left: 1em;
+	float: left;
+	clear: left;
 	text-align: right;
-	float: right;
 } 
 
 /* 
@@ -427,6 +308,7 @@ Notes applies to footnotes on the source text.
 .notes
 {
 	margin-left: 16.8em;
+	width: 33em;
 }
 
 .notes p
@@ -438,7 +320,7 @@ Notes applies to footnotes on the source text.
 .notesheading { font-style: italic; }
 
 p.indent0 
-{	margin-bottom: 0;
+{	margin-bottom: 0;  
 }
 
 p.indent1 
@@ -515,9 +397,12 @@ Styles for play.html
 */
 .play .coverimage
 {
+	position: fixed;
 }
 .play .links
 {
+	margin-top: 200px;
+	position: fixed;
 }
 
 .interpretercredit
@@ -531,7 +416,7 @@ Styles for play.html
 {
 	background: white;
 	bottom: 0px;
-	left: 1em;
+	left: 15.4em;
 	line-height: 1.4;
 	margin: 0px;
 	position: absolute;
@@ -545,15 +430,14 @@ Styles for mobile browsers: change to a one-column layout.
 
 @media screen and (max-device-width: 480px)
 {
-	.coverimage, .introduction, .about, .playinfo, .source, .sourceintroduction, .sourcecoverimage, .notes
+	.coverimage, .introduction, .links, .about, .playinfo, .source, .sourceintroduction, .sourcecoverimage, .notes
 	{
 		float: none;
 		margin-left: 1em;
-		margin-right: 1em;
 		text-align: left;
 	}
 
-	.play .coverimage, .play .interpretercredit
+	.play .coverimage, .play .links, .play .interpretercredit
 	{
 		display: none;
 	}
@@ -562,17 +446,5 @@ Styles for mobile browsers: change to a one-column layout.
 	{
 		left: 0px;
 		width: auto;
-	}
-
-	#subheader, #subfooter, #subcolumn
-	{
-		width: 320px;
-	}
-
-	.framelabel, .play .links
-	{
-		font-size: 12px;
-		padding-left: 10px;
-		padding-right: 10px;
 	}
 }
