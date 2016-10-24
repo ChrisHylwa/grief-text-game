@@ -1,4 +1,4 @@
-"Tower of Happiness" by Avita Sharma, Chris Hylwa & Stephanie Li
+"Room Wodplay or Surrealist project" by Avita, Chris & Steph
 
 
 
@@ -6,19 +6,15 @@ Chapter 1 - Set-up
 
 Section 1 - Synonyms
 
-Include Glulx Text Effects by Emily Short.
-
-	
 Figure of Acceptance is the file "Beyond Acceptance.jpg". 
 Sound of wind is the file "22331__black-boe__wind.ogg".
 
 Include Multiple Sounds by Massimo Stella.
-[When play begins: display the Figure of Acceptance; play the Sound of wind in background with loop.]
+When play begins: display the Figure of Acceptance; play the Sound of wind in background with loop.
 
 
 Help is an action applying to nothing. Understand "help" or "HELP" or "Help"  or "help me" or
-"HELP ME" or "Help me" or "I need help" or "call for help" or "Please help me" or "Help I need somebody"
-or "Help Not just anybody" or "Help I need someone" or "HALP" as help. 
+"HELP ME" or "Help me" or "I need help" as help. 
 Carry out help: 
 	say "[help][paragraph break]"
 	
@@ -92,6 +88,7 @@ Before doing something when a secret door is the second noun and the second noun
 Section 4 - Base Converter (not really)
 
 [Waits for user input, then converts the number to the desired base]
+Include Version 5 of Glulx Text Effects by Emily Short.
 Input handling rules are an object-based rulebook.
 
 The B-conv is a thing. The printed name  of b-conv is "B-box". Understand "B-box" or "bbox" as B-conv.
@@ -125,12 +122,11 @@ The b-conv has some text called default response. The default response of a b-co
 Table of User Styles (continued)
 style name	justification	italic	indentation	first line indentation	font weight	color 
 special-style-1	left-justified	false	15	15	bold-weight	"#000000"
-special-style-2	left-justified	false	0	0	regular-weight	"#FFFFFF"
 
 A input handling rule for a b-conv:
 	let N be indexed text;
 	let N be "[the topic understood]";
-	if N matches the regular expression "<a-zA-Z0-9>+ (<2-9>|<1-2><0-9>|3<0-6>) (<2-9>|<1-2><0-9>|3<0-6>)$":
+	if N matches the regular expression "<a-zA-Z0-9>* (<2-9>|<1-2><0-9>|3<0-6>) (<2-9>|<1-2><0-9>|3<0-6>)$":
 		let Num be word number 1 in N in upper case;
 		let mybase be word number 2 in N;
 		let newbase be word number 3 in N; 
@@ -142,11 +138,11 @@ A input handling rule for a b-conv:
 					rule succeeds;
 		say "The screen whirls for a few seconds, then outputs a series of digits. You recognize the output as [Num] in base [mybase] converted to base [newbase].";
 		rule succeeds;
-	otherwise if N matches the regular expression "(<a-zA-Z0-9>)+(\s\d+){2}$":
-		say "Out of Range";
-		rule fails;
-	otherwise if N matches the regular expression "(<a-zA-Z0-9>)+(\s\d+)?$":
+	otherwise if N matches the regular expression "<a-zA-Z0-9>* (<2-9>|<1-2><0-9>|3<0-6>)$":
 		say "Missing Number";
+		rule fails;
+	otherwise if N matches the regular expression "<a-zA-Z0-9>* (<1-9>|<1-2><0-9>|3<7-9>) (<1-9>|<1-2><0-9>|3<7-9>)$":
+		say "Out of Range";
 		rule fails;
 	say "Incorrect Input";
 	rule fails.
@@ -154,10 +150,6 @@ A input handling rule for a b-conv:
 Chapter 2 - Story 
 
 Section 1 - Denial Door and Puzzle setup
-
-Puzzle_solved is a number that varies.
-
-Puzzle_solved is 0.
 
 The Denial Room is a room with the printed name "Room". "You are in a room." 
 
@@ -185,7 +177,7 @@ Instead of examining a note:
 	if Count is 0 begin;
 		say   "+--------------------------------------+[line break]
 			   | Look for painting; Uifsf jt bo boomf. | [line break]
-			   | _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ | [line break]
+			   |                                                                 | [line break]
 			   | _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ | [line break]
 			   +--------------------------------------+";
 			reveal the painting of Julius Caesar;
@@ -209,50 +201,44 @@ Instead of examining a note:
 Rule for printing the locale description of The Denial Room:
 	say "" instead.
 
-Instead of eating the apple:
-	say "You try to chomp into the apple; the apple bites back and breaks a tooth. Ow.".
+
 
 After doing something to the painting of Julius Caesar:
 	 reveal the apple;
 	 reveal the pot;
 	now Count is 1.
 	
-The description of the apple is "There is a juicy red apple shaped as a heart next to a warped [special-style-1]pot[roman type]. You want to take the heart-shaped apple. You trust that there are no worms hidden inside it."
+The description of the apple is "There is a juicy red apple shaped as a heart next to a warped pot. You want to take the heart-shaped apple. You trust that there are no worms hidden inside it."
 The description of the pot is "There is a pot holding soft and loamy soil blacker than night."
 
-Instead of examining the apple when the player has the apple:
-	say "You feel the dead weight of the apple in your pocket, dragging you closer to rock bottom."
-
 Instead of examining the pot when the knife is revealed:
-	if the player has the knife:
-		say "The pot is useless";
-	otherwise if knife is on-stage:
-		say "The silver blade glistens in the bottom of the pot."
+	if knife is on-stage, say "The silver blade glistens in the bottom of the pot."
+
+Instead of examining the pot when the player has the knife:
+	say "The pot is useless."
 	
 Instead of examining the pot when the wall is revealed:
-	say "The pot is useless"
+	say "The pot is useless".
 	
 Instead of inserting the apple into the pot:
-	say "You crush the heart-apple in the pot. Smoke bellows outward, forming a shuddering tree. The wispy tree grows and grows until it dissolves. You look into the pot, and a knife stares back at you.";
+	say "You crush the heart-apple in the pot. Smoke bellows outward, forming a shuddering tree. The wispy tree grows and grows until the air consumes it. You look into the pot, and a knife stares back at you.";
 	remove apple from play;
 	reveal knife.
 	
-Instead of examining the player:
-	say "You can't bear to look at yourself anymore.".
 
-Stabbing it with is an action applying to two visible things. Understand "stab [something] with [something]" as stabbing it with. 
+Stabbing it with is an action applying to two visible things. Understand "stab [something] with [knife]" as stabbing it with. 
 
 Check stabbing something (called the target) with something (called the pigsticker) (this is the you must have a blade to stab rule):
 	if the player does not have a knife begin;
-		say "You don't have anything physical sharp enough to cut--only your words.";
+		if the knife is hidden, say "You don't have anything physical sharp enough to cut--only your words.";
 		stop the action;
 	end if.
 
 Check stabbing something (called the target) with something (called the pigsticker) (this is the you can only stab with a blade rule):
-	if the second noun is not a knife:
-		if the second noun is not the target:
-			say "You try and try to cut [target], monotoneously stabbing as you forget the world exists. Eventually, like with everything else, you give up.";
-			stop the action;
+	if the second noun is not a knife begin;
+		say "You try and try to cut [target], monotoneously stabbing as you forget the world exists. Eventually, like with everything else, you give up.";
+		stop the action;
+	end if.
 
 Check stabbing something (called the target) with something (called the pigsticker) (this is the you can't stab something with itself rule):
 	if the target is the pigsticker begin;
@@ -261,9 +247,7 @@ Check stabbing something (called the target) with something (called the pigstick
 	end if.
 
 Check stabbing something (called the target) with something (called the pigsticker) (this is the harikari rule):
-	if the target is the player:
-		say "You can't stab yourself.";
-		stop the action.
+	if the target is the player, say "You can't stab yourself.".
 
 Carry out an actor stabbing something (called the target) with something (this is the standard carry out stabbing rule):
 	if the target is a painting begin;
@@ -287,17 +271,16 @@ Understand "break [something]" as breaking.
 Breaking is an action applying to one visible thing. 
 
 Carry out an actor breaking something (called the target):
-	if the target is the player:
-		say "You have no intact pieces of yourself to further break down.";
-	if the target is the pot:
-		if the painting is in the Denial room:
-			say "You pick up the pot and smash it as hard as you can on the floor, but the pot liquifies and melts the ground. In the span of a blink, it reappears intact, yet more warped than before.";
-		if the painting is nowhere:
+		if the target is the player, say "You have no intact pieces of yourself to further break down.";
+		if the target is the pot begin;
 			say "In the dusty, smoked-strewn room, amidst the broken pieces of a once intact thing, lies the pot's useless corpse. Was that really necessary?";
 			remove pot from play;
 			now Count is 2;
-	if the target is not the player:
-		if the target is not the pot, say "It is unbreakable.";
+		end if;
+		if the target is not the player begin;
+			if the target is not the pot, say "It is unbreakable.";
+		end if.
+		
 
 Understand the command "make" as something new.
 Understand "make [something]" as making.
@@ -305,23 +288,17 @@ Making is an action applying to one visible thing.
 
 After reading a command: 
 	if the player is in the Denial room begin;
-		if the pot is nowhere and player's command matches the regular expression "m|Ma|Ak|Ke|E d|Do|Oo|Or|R" begin;
+		if the pot is nowhere and player's command matches the regular expression "make door" begin;
 			now the oak door is revealed;
-			say "[line break]On the blank wall reveals an outline of a door. You press against it and feel it give, despite no hinge showing. You accept the existence of the
+			say "[line break] On the blank wall reveals an outline of a door. You press against it and feel it give, despite no hinge showing. You accept the existence of the
                                  door and go through, feeling yourself lifting upwards.";
 			move player to Anger room;
-			now Puzzle_solved is 1;
 		end if;
 	end if;
 
 
 To say help:
-	if Puzzle_solved is 0:
-		say "Look for a note";
-	else if Puzzle_solved is 1:
-		say "Examine Everything";
-	else if Puzzle_solved is 2:
-		say "Ask about something".
+	say "Look for a note".
 
 Section 1 - Anger Room
 
@@ -333,6 +310,9 @@ Rrq room is a room with the printed name "Room". "As you enter the next room, th
 	bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before..."
 Rrr room is a room with the printed name "Room". "As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are
 	bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before..."
+
+To say help:
+	say "Examine everything."
 	
 rand_num is a number that varies.
 
@@ -342,7 +322,7 @@ The Anger Room is a room with the printed name "Room[line break]As you enter the
 leg. You wish you had your knife. You hate this. You hate this so much. You hate this enough to grab the thing and squeeze and squeeze until it cracks and you throw it against the bloody wall and walk over to it and stomp it to bits. You notice tiny globs emerging from the carcass and oozing towards you. You run back to the old door and open it, tears blotching your vision.
 [paragraph break]".
 
-
+.
 
 The anger emotion is hidden and violent in the Anger room.
 
@@ -465,7 +445,7 @@ Carry out an actor randooring :
 
 Instead of examining a not examined qstuffed animal:
 	if player is in Rrq:
-		 say "You see a dilapitated stuffed bear. Its white fluffiness is speckled with deep reddish-brown scabs. Its hollow eyes pierce you.
+		 say "You see a dilapitated stuffed bear. Its white fluffiness is speckled with deep, reddish brown scabs. Its hollow eyes pierce you.
 		   [line break]You feel its stare boring a hole through your head. You feel its judgement, but no one belittles you and gets away with it. You steel your
 			    fists and bash its head in. [italic type] Crack. [roman type]Your bloodied, gnarled hands ache.";
 		now the qstuffed animal  is examined.
@@ -480,7 +460,7 @@ Instead of examining a not examined wstuffed animal:
 	
 Instead of examining a not examined rstuffed animal:
 	if player is in Rrr:
-		say "You see a dead bear. Its red fluffiness is speckled with deep brownish-white scabs. Its hollow eyes follow you throughout the room.";
+		say "You see a dead bear. Its red fluffiness is speckled with deep, brownish white scabs. Its hollow eyes follow you throughout the room";
 		say "[line break]Your eyes are aching; the pain throbs with every step taken away from the bear. It slowly spreads down your face to your fists as your rage builds. 
 						You stab the bear in the chest with your damaged fist---you hear something break, but can't feel it. You pummel it again and again until you can feel something. The heart is saved for last. [italic type] Crunch. Crunch. Crunch. [roman type] Tasty.";
 		now the rstuffed animal is examined.
@@ -530,11 +510,11 @@ Instead of examining not examined tphotographs:
 
 Instead of examining examined qphotographs:
 	if player is in Rrq:
-		 say "Scattered shreds of a ruined photograph are stuck to the floor.".
+		 say "Scattered shreds of a ruined photograph are stuck to the floor".
 
 Instead of examining examined wphotographs:
 	if player is in Rrw:
-		say "Scattered shreds of a ruined photograph are stuck to the floor.".
+		say "Scattered shreds of a ruined photograph are stuck to the floor".
 
 Instead of examining examined rphotographs:
 	if player is in Rrr:
@@ -709,9 +689,7 @@ Every turn:
 									if the tdoor is revealed:
 										say "A door appears in the middle of the room. You open it, and seeing nothing unusual, you step through. But you go nowhere and are still in the room. Frustration builds as you bang your head against the frame. You plead to make the world stop. You close your eyes and fall backwards, giving up. Yet you miss the ground and feel yourself being transported upwards.";
 										now the anger is tranquil;
-										now Puzzle_solved is 2;
-										end the story finally saying "Thanks for playing! More rooms will be out shortly!".
-[										move player to the B-Enter room.
+										move player to the B-Enter room.
 
 
 Chapter 3 - Bargaining
@@ -731,6 +709,9 @@ The Altar is a room. "A graywashed room whose walls look closer to stone than al
 Understand the command "pray" as something new.
 Understand "pray" as praying.
 Praying is an action applying to nothing.
+
+To say help:
+	say "Ask person about something".
 
 Carry out an actor praying:
 	say "You pray with all your might and energy, but nothing comes of it.".
@@ -963,11 +944,11 @@ Credits is a room. "Thank you for playing!"
 The Staircase is above The Tower. Below The Staircase is nowhere. 
 The Upper Landing is above The Staircase. Below the Upper Landing is nowhere.
 The End is above the Upper Landing. Below the Upper Landing is nowhere. Below The End is nowhere.
-]
+
 The story headline is "An Interactive Fiction".
 The story genre is "Puzzle". 
 The story creation year is 2016. 
 
-Release along with an interpreter, the introductory booklet, a file of "Beyond Acceptance image" called "Beyond Acceptance.jpg" and a file of "Wind sounds" called "22331__black-boe__wind.ogg", and cover art .
+Release along with an interpreter, the introductory booklet, a file of "Beyond Acceptance image" called "Beyond Acceptance.jpg" and a file of "Wind sounds" called "22331__black-boe__wind.ogg".
 
 test me with "look note / check picture / take apple / put apple in pot / take knife / stab caesar / input o6goceee 28 31 / break pot / make door".

@@ -24,7 +24,7 @@ placeholder [IFID] = "676938C5-CE16-4BA7-B913-B3D51F945CF1"
 placeholder [RELEASE] = "1"
 placeholder [YEAR] = "2016"
 placeholder [TITLE] = "Tower of Happiness"
-placeholder [AUTHOR] = "Avita, Chris &amp; Steph"
+placeholder [AUTHOR] = "Avita Sharma, Chris Hylwa &amp; Stephanie Li"
 placeholder [BLURB] = "A work of interactive fiction."
 
 ! Other material to release
@@ -35,13 +35,22 @@ auxiliary "C:\Program Files (x86)\Inform 7\Internal\Miscellany\IntroductionToIF.
 
 ! Website instructions
 
+placeholder [ENCODEDSTORYFILE] = "Tower of Happiness.gblorb.js"
+template path "C:\Users\Neo\Documents\Inform\Projects\WordPlay.materials\Templates"
+template path "C:\Users\Neo\Documents\Inform\Templates"
+template path "C:\Program Files (x86)\Inform 7\Internal\Templates"
+placeholder [INTERPRETERSCRIPTS] = " "
+interpreter "Quixe" "g"
+base64 "C:\Users\Neo\Documents\Inform\Projects\WordPlay.inform\Build\output.ulx" to "C:\Users\Neo\Documents\Inform\Projects\WordPlay.materials\Release\interpreter\Tower of Happiness.gblorb.js"
+
+! Website instructions
+
 template path "C:\Users\Neo\Documents\Inform\Projects\WordPlay.materials\Templates"
 template path "C:\Users\Neo\Documents\Inform\Templates"
 template path "C:\Program Files (x86)\Inform 7\Internal\Templates"
 css
 website "Standard"
-status instruction ||&nbsp;<a href="source:story.ni#line954"><img border=0 src=inform:/doc_images/Reveal.png></a>||
-status alternative ||Using 'Release along with an interpreter', for in-browser play on your website&nbsp;<a href=inform:/doc406.html><img border=0 src=inform:/doc_images/help.png></a>||
+status instruction ||&nbsp;<a href="source:story.ni#line971"><img border=0 src=inform:/doc_images/Reveal.png></a>||
 status alternative ||Using 'Release along with the source text'&nbsp;<a href=inform:/doc412.html><img border=0 src=inform:/doc_images/help.png></a>||
 status alternative ||Using 'Release along with a solution'&nbsp;<a href=inform:/doc411.html><img border=0 src=inform:/doc_images/help.png></a>||
 status alternative ||Using 'Release along with the library card'&nbsp;<a href=inform:/doc412.html><img border=0 src=inform:/doc_images/help.png></a>||

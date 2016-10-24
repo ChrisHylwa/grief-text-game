@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Skein rootNode="node-1">
   <generator>Windows Inform 7 6M62</generator>
-  <activeNode nodeId="node-239"/>
+  <activeNode nodeId="node-1"/>
   <item nodeId="node-1">
     <command xml:space="preserve">- start -</command>
-    <result xml:space="preserve">Room Wodplay or Surrealist project&#x000A;An Interactive Fiction by Avita, Chris &amp; Steph&#x000A;Release 1 / Serial number 161016 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Room&#x000A;You are in a room.&#x000A;&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Tower of Happiness&#x000A;An Interactive Fiction by Avita Sharma, Chris Hylwa &amp; Stephanie Li&#x000A;Release 1 / Serial number 161023 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Room&#x000A;You are in a room.&#x000A;&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>
     <temporary score="0">NO</temporary>
     <children>
       <child nodeId="node-2"/>
-      <child nodeId="node-115"/>
-      <child nodeId="node-116"/>
+      <child nodeId="node-197"/>
+      <child nodeId="node-198"/>
     </children>
   </item>
   <item nodeId="node-2">
     <command xml:space="preserve">help</command>
-    <result xml:space="preserve">Examine everything.&#x000A;&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Look for a note&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve">Examine everything.&#x000A;&#x000A;&#x000A;&gt;</commentary>
     <played>YES</played>
     <changed>NO</changed>
@@ -416,7 +416,7 @@
     <temporary score="0">NO</temporary>
     <children>
       <child nodeId="node-39"/>
-      <child nodeId="node-145"/>
+      <child nodeId="node-185"/>
     </children>
   </item>
   <item nodeId="node-39">
@@ -483,7 +483,7 @@
     <temporary score="0">NO</temporary>
     <children>
       <child nodeId="node-45"/>
-      <child nodeId="node-157"/>
+      <child nodeId="node-183"/>
     </children>
   </item>
   <item nodeId="node-45">
@@ -528,7 +528,7 @@
     <temporary score="0">NO</temporary>
     <children>
       <child nodeId="node-49"/>
-      <child nodeId="node-159"/>
+      <child nodeId="node-102"/>
     </children>
   </item>
   <item nodeId="node-49">
@@ -1111,10 +1111,637 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-159">
+  <item nodeId="node-102">
     <command xml:space="preserve">x boat</command>
     <result xml:space="preserve">You see a sailboat and reminisce on your dreams of escaping this dreary world.&#x000A;&#x000A;You uncovered a hidden switch and random door!&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve">You see a sailboat and reminisce on your dreams of escaping this dreary world.&#x000A;&#x000A;You uncovered a hidden switch and random door!&#x000A;&#x000A;&gt;</commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-103"/>
+    </children>
+  </item>
+  <item nodeId="node-103">
+    <command xml:space="preserve">x bear</command>
+    <result xml:space="preserve">You hate this bear.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-104"/>
+    </children>
+  </item>
+  <item nodeId="node-104">
+    <command xml:space="preserve">x photo</command>
+    <result xml:space="preserve">Scattered shreds of a ruined photograph are stuck to the floor&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-105"/>
+    </children>
+  </item>
+  <item nodeId="node-105">
+    <command xml:space="preserve">x boat</command>
+    <result xml:space="preserve">On closer examination, you notice that the sailboat has the scars of spending most of its life inside a bottle. You feel yourself rooting for the little boat.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-106"/>
+    </children>
+  </item>
+  <item nodeId="node-106">
+    <command xml:space="preserve">x switch</command>
+    <result xml:space="preserve">The switch is off&#x000A;&gt;</result>
+    <commentary xml:space="preserve">The switch is off&#x000A;&gt;</commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-107"/>
+    </children>
+  </item>
+  <item nodeId="node-107">
+    <command xml:space="preserve">switch swich</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-108"/>
+    </children>
+  </item>
+  <item nodeId="node-108">
+    <command xml:space="preserve">switch switch</command>
+    <result xml:space="preserve">You flipped the switch&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-109"/>
+    </children>
+  </item>
+  <item nodeId="node-109">
+    <command xml:space="preserve">flip switch</command>
+    <result xml:space="preserve">You flipped the switch&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-110"/>
+    </children>
+  </item>
+  <item nodeId="node-110">
+    <command xml:space="preserve">look random door</command>
+    <result xml:space="preserve">Inscribed on the door is randoor&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-111"/>
+    </children>
+  </item>
+  <item nodeId="node-111">
+    <command xml:space="preserve">randoor</command>
+    <result xml:space="preserve">Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, a photograph and a sailboat here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, a photograph and a sailboat here.&#x000A;&#x000A;&gt;</commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-112"/>
+    </children>
+  </item>
+  <item nodeId="node-112">
+    <command xml:space="preserve">x bear</command>
+    <result xml:space="preserve">You see a dilapitated stuffed bear. Its white fluffiness is speckled with deep, reddish brown scabs. Its hollow eyes pierce you. &#x000A;You feel its stare boring a hole through your head. You feel its judgement, but no one belittles you and gets away with it. You steel your fists and bash its head in.  Crack. Your bloodied, gnarled hands ache.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">You see a dilapitated stuffed bear. Its white fluffiness is speckled with deep, reddish brown scabs. Its hollow eyes pierce you. &#x000A;You feel its stare boring a hole through your head. You feel its judgement, but no one belittles you and gets away with it. You steel your fists and bash its head in.  Crack. Your bloodied, gnarled hands ache.&#x000A;&#x000A;&gt;</commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-113"/>
+    </children>
+  </item>
+  <item nodeId="node-113">
+    <command xml:space="preserve">x photo</command>
+    <result xml:space="preserve">You see a man surrounded by bookshelves sitting on a desk with mountains of papers--both coffee stained and gold-trimmed. His insiduous grin mocks your incompetence, yet you still feel respect for him. You want his acknowledgment as much as you want to destroy him. Instead, you take pleasure in ripping his image to shreds.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">You see a man surrounded by bookshelves sitting on a desk with mountains of papers--both coffee stained and gold-trimmed. His insiduous grin mocks your incompetence, yet you still feel respect for him. You want his acknowledgment as much as you want to destroy him. Instead, you take pleasure in ripping his image to shreds.&#x000A;&#x000A;&gt;</commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-114"/>
+    </children>
+  </item>
+  <item nodeId="node-114">
+    <command xml:space="preserve">x sail</command>
+    <result xml:space="preserve">You see a sailboat and reminisce on your dreams of escaping this dreary world.&#x000A;&#x000A;You uncovered a hidden switch and random door!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">You see a sailboat and reminisce on your dreams of escaping this dreary world.&#x000A;&#x000A;You uncovered a hidden switch and random door!&#x000A;&#x000A;&gt;</commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-115"/>
+    </children>
+  </item>
+  <item nodeId="node-115">
+    <command xml:space="preserve">x switch</command>
+    <result xml:space="preserve">The switch is off&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-116"/>
+    </children>
+  </item>
+  <item nodeId="node-116">
+    <command xml:space="preserve">hit switch</command>
+    <result xml:space="preserve">You flipped the switch&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-117"/>
+    </children>
+  </item>
+  <item nodeId="node-117">
+    <command xml:space="preserve">randoor</command>
+    <result xml:space="preserve">Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, photograph and a sailboat here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, photograph and a sailboat here.&#x000A;&#x000A;&gt;</commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-118"/>
+    </children>
+  </item>
+  <item nodeId="node-118">
+    <command xml:space="preserve">x boat</command>
+    <result xml:space="preserve">You see a sailboat and reminisce on your dreams of escaping this dreary world.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">You see a sailboat and reminisce on your dreams of escaping this dreary world.&#x000A;&#x000A;&gt;</commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-119"/>
+    </children>
+  </item>
+  <item nodeId="node-119">
+    <command xml:space="preserve">x photo</command>
+    <result xml:space="preserve">You can almost taste the sweetly baked loaf of bread that you used to have, captured in this photo. But that taste is no longer yours since you've forsaken the maker of the loaves. You needed a baseline of self respect that was always diminished in her sickly charming ways. But the bread has no part in her machinations, and is left alone.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">You can almost taste the sweetly baked loaf of bread that you used to have, captured in this photo. But that taste is no longer yours since you've forsaken the maker of the loaves. You needed a baseline of self respect that was always diminished in her sickly charming ways. But the bread has no part in her machinations, and is left alone.&#x000A;&#x000A;&gt;</commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-120"/>
+    </children>
+  </item>
+  <item nodeId="node-120">
+    <command xml:space="preserve">x sail</command>
+    <result xml:space="preserve">The sailboat sails away on the back of festering dreams&#x000A;&gt;</result>
+    <commentary xml:space="preserve">The sailboat sails away on the back of festering dreams&#x000A;&gt;</commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-121"/>
+    </children>
+  </item>
+  <item nodeId="node-121">
+    <command xml:space="preserve">x bear</command>
+    <result xml:space="preserve">You see a dead bear. Its red fluffiness is speckled with deep, brownish white scabs. Its hollow eyes follow you throughout the room&#x000A;Your eyes are aching; the pain throbs with every step taken away from the bear. It slowly spreads down your face to your fists as your rage builds. You stab the bear in the chest with your damaged fist---you hear something break, but can't feel it. You pummel it again and again until you can feel something. The heart is saved for last.  Crunch. Crunch. Crunch.  Tasty.&#x000A;&#x000A;You uncovered a hidden switch and random door!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">You see a dead bear. Its red fluffiness is speckled with deep, brownish white scabs. Its hollow eyes follow you throughout the room&#x000A;Your eyes are aching; the pain throbs with every step taken away from the bear. It slowly spreads down your face to your fists as your rage builds. You stab the bear in the chest with your damaged fist---you hear something break, but can't feel it. You pummel it again and again until you can feel something. The heart is saved for last.  Crunch. Crunch. Crunch.  Tasty.&#x000A;&#x000A;You uncovered a hidden switch and random door!&#x000A;&#x000A;&gt;</commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-122"/>
+    </children>
+  </item>
+  <item nodeId="node-122">
+    <command xml:space="preserve">x switch</command>
+    <result xml:space="preserve">The switch is off&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-123"/>
+    </children>
+  </item>
+  <item nodeId="node-123">
+    <command xml:space="preserve">x switch</command>
+    <result xml:space="preserve">The switch is off&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-124"/>
+    </children>
+  </item>
+  <item nodeId="node-124">
+    <command xml:space="preserve">flip switch</command>
+    <result xml:space="preserve">You flipped the switch&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-125"/>
+    </children>
+  </item>
+  <item nodeId="node-125">
+    <command xml:space="preserve">flip switch</command>
+    <result xml:space="preserve">You flipped the switch&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-126"/>
+    </children>
+  </item>
+  <item nodeId="node-126">
+    <command xml:space="preserve">randoor</command>
+    <result xml:space="preserve">Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, photograph and a sailboat here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, photograph and a sailboat here.&#x000A;&#x000A;&gt;</commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-127"/>
+    </children>
+  </item>
+  <item nodeId="node-127">
+    <command xml:space="preserve">x door</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-128"/>
+    </children>
+  </item>
+  <item nodeId="node-128">
+    <command xml:space="preserve">x random door</command>
+    <result xml:space="preserve">There is nothing here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-129"/>
+    </children>
+  </item>
+  <item nodeId="node-129">
+    <command xml:space="preserve">x switch</command>
+    <result xml:space="preserve">There is nothing here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-130"/>
+    </children>
+  </item>
+  <item nodeId="node-130">
+    <command xml:space="preserve">randoor</command>
+    <result xml:space="preserve">&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-131"/>
+    </children>
+  </item>
+  <item nodeId="node-131">
+    <command xml:space="preserve">x bear</command>
+    <result xml:space="preserve">You see a dead bear. As you inch closer to it, the bear's open maw snaps shut. Its hollow eyes pierce you.&#x000A;&#x000A;You feel its stare boring a hole in your empty chest. You don't need this. Your hands, still wet, reach into the Bear and pull its insides out. The eyes are saved for last.  Crunch. Crunch. Crunch.  Tasty.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">You see a dead bear. As you inch closer to it, the bear's open maw snaps shut. Its hollow eyes pierce you.&#x000A;&#x000A;You feel its stare boring a hole in your empty chest. You don't need this. Your hands, still wet, reach into the Bear and pull its insides out. The eyes are saved for last.  Crunch. Crunch. Crunch.  Tasty.&#x000A;&#x000A;&gt;</commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-132"/>
+    </children>
+  </item>
+  <item nodeId="node-132">
+    <command xml:space="preserve">x switch</command>
+    <result xml:space="preserve">There is nothing here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-133"/>
+    </children>
+  </item>
+  <item nodeId="node-133">
+    <command xml:space="preserve">x photo</command>
+    <result xml:space="preserve">A swirl of movement cascades across the picture, like stop motion captured on one still. You love and regret and understand and forgive and still feel anger against fate and the whims of forces you cannot control. The moving body stays silently on the wall, proud in its withering defiance.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">A swirl of movement cascades across the picture, like stop motion captured on one still. You love and regret and understand and forgive and still feel anger against fate and the whims of forces you cannot control. The moving body stays silently on the wall, proud in its withering defiance.&#x000A;&#x000A;&gt;</commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-134"/>
+    </children>
+  </item>
+  <item nodeId="node-134">
+    <command xml:space="preserve">randoor</command>
+    <result xml:space="preserve">&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-135"/>
+    </children>
+  </item>
+  <item nodeId="node-135">
+    <command xml:space="preserve">x photo</command>
+    <result xml:space="preserve">You can't bear to look away and you can't live with yourself staring at the photo on the wall.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-136"/>
+    </children>
+  </item>
+  <item nodeId="node-136">
+    <command xml:space="preserve">x switch</command>
+    <result xml:space="preserve">There is nothing here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-137"/>
+    </children>
+  </item>
+  <item nodeId="node-137">
+    <command xml:space="preserve">randoor</command>
+    <result xml:space="preserve">&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-138"/>
+    </children>
+  </item>
+  <item nodeId="node-138">
+    <command xml:space="preserve">x boat</command>
+    <result xml:space="preserve">You see a sailboat and reminisce on your dreams of escaping this dreary world.&#x000A;&#x000A;You uncovered a hidden switch and random door!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">You see a sailboat and reminisce on your dreams of escaping this dreary world.&#x000A;&#x000A;You uncovered a hidden switch and random door!&#x000A;&#x000A;&gt;</commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-139"/>
+    </children>
+  </item>
+  <item nodeId="node-139">
+    <command xml:space="preserve">x photo</command>
+    <result xml:space="preserve">You can't bear to look away and you can't live with yourself staring at the photo on the wall.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-140"/>
+    </children>
+  </item>
+  <item nodeId="node-140">
+    <command xml:space="preserve">x bear</command>
+    <result xml:space="preserve">You hate this bear.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-141"/>
+    </children>
+  </item>
+  <item nodeId="node-141">
+    <command xml:space="preserve">x switch</command>
+    <result xml:space="preserve">The switch is off&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-142"/>
+    </children>
+  </item>
+  <item nodeId="node-142">
+    <command xml:space="preserve">switch switch</command>
+    <result xml:space="preserve">You flipped the switch&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-143"/>
+    </children>
+  </item>
+  <item nodeId="node-143">
+    <command xml:space="preserve">randoor</command>
+    <result xml:space="preserve">Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, a photograph and a sailboat here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-144"/>
+    </children>
+  </item>
+  <item nodeId="node-144">
+    <command xml:space="preserve">x photo</command>
+    <result xml:space="preserve">Scattered shreds of a ruined photograph are stuck to the floor&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-145"/>
+    </children>
+  </item>
+  <item nodeId="node-145">
+    <command xml:space="preserve">x boat</command>
+    <result xml:space="preserve">On closer examination, you notice that the sailboat is made up of entirely different pieces. You wonder which piece was the original--or if it's even there at all.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-146"/>
+    </children>
+  </item>
+  <item nodeId="node-146">
+    <command xml:space="preserve">x switch</command>
+    <result xml:space="preserve">The switch is on&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-147"/>
+    </children>
+  </item>
+  <item nodeId="node-147">
+    <command xml:space="preserve">randoor</command>
+    <result xml:space="preserve">Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, photograph and a sailboat here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-148"/>
+    </children>
+  </item>
+  <item nodeId="node-148">
+    <command xml:space="preserve">x photo</command>
+    <result xml:space="preserve">Your stomach growls as you yearn for the bread.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-149"/>
+    </children>
+  </item>
+  <item nodeId="node-149">
+    <command xml:space="preserve">x boat</command>
+    <result xml:space="preserve">The sailboat sails away on the back of festering dreams&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-150"/>
+    </children>
+  </item>
+  <item nodeId="node-150">
+    <command xml:space="preserve">x switch</command>
+    <result xml:space="preserve">The switch is on&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-151"/>
+    </children>
+  </item>
+  <item nodeId="node-151">
+    <command xml:space="preserve">randoor</command>
+    <result xml:space="preserve">Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, photograph and a sailboat here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-152"/>
+    </children>
+  </item>
+  <item nodeId="node-152">
+    <command xml:space="preserve">x boat</command>
+    <result xml:space="preserve">On closer examination, you notice that the sailboat has the scars of spending most of its life inside a bottle. You feel yourself rooting for the little boat.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-153"/>
+    </children>
+  </item>
+  <item nodeId="node-153">
+    <command xml:space="preserve">x photo</command>
+    <result xml:space="preserve">Scattered shreds of a ruined photograph are stuck to the floor&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-154"/>
+    </children>
+  </item>
+  <item nodeId="node-154">
+    <command xml:space="preserve">x switch</command>
+    <result xml:space="preserve">The switch is off&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-155"/>
+    </children>
+  </item>
+  <item nodeId="node-155">
+    <command xml:space="preserve">randoor</command>
+    <result xml:space="preserve">Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, photograph and a sailboat here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-156"/>
+    </children>
+  </item>
+  <item nodeId="node-156">
+    <command xml:space="preserve">x photo</command>
+    <result xml:space="preserve">Your stomach growls as you yearn for the bread.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-157"/>
+    </children>
+  </item>
+  <item nodeId="node-157">
+    <command xml:space="preserve">x bear</command>
+    <result xml:space="preserve">You hate this bear.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-158"/>
+    </children>
+  </item>
+  <item nodeId="node-158">
+    <command xml:space="preserve">x sail</command>
+    <result xml:space="preserve">The sailboat sails away on the back of festering dreams&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-159"/>
+    </children>
+  </item>
+  <item nodeId="node-159">
+    <command xml:space="preserve">x switch</command>
+    <result xml:space="preserve">The switch is on&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>
     <temporary score="0">NO</temporary>
@@ -1123,8 +1750,8 @@
     </children>
   </item>
   <item nodeId="node-160">
-    <command xml:space="preserve">x bear</command>
-    <result xml:space="preserve">You hate this bear.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">randoor</command>
+    <result xml:space="preserve">Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, photograph and a sailboat here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>
@@ -1135,18 +1762,18 @@
   </item>
   <item nodeId="node-161">
     <command xml:space="preserve">x photo</command>
-    <result xml:space="preserve">Scattered shreds of a ruined photograph are stuck to the floor&#x000A;&gt;</result>
+    <result xml:space="preserve">You can't bear to look away and you can't live with yourself staring at the photo on the wall.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <temporary score="0">NO</temporary>
     <children>
       <child nodeId="node-162"/>
     </children>
   </item>
   <item nodeId="node-162">
-    <command xml:space="preserve">x boat</command>
-    <result xml:space="preserve">On closer examination, you notice that the sailboat has the scars of spending most of its life inside a bottle. You feel yourself rooting for the little boat.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">x switch</command>
+    <result xml:space="preserve">The switch is on&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>
@@ -1157,8 +1784,8 @@
   </item>
   <item nodeId="node-163">
     <command xml:space="preserve">x switch</command>
-    <result xml:space="preserve">The switch is off&#x000A;&gt;</result>
-    <commentary xml:space="preserve">The switch is off&#x000A;&gt;</commentary>
+    <result xml:space="preserve">The switch is on&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>
     <temporary score="0">NO</temporary>
@@ -1167,8 +1794,8 @@
     </children>
   </item>
   <item nodeId="node-164">
-    <command xml:space="preserve">switch swich</command>
-    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">flip switch</command>
+    <result xml:space="preserve">You flipped the switch&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>
@@ -1178,19 +1805,19 @@
     </children>
   </item>
   <item nodeId="node-165">
-    <command xml:space="preserve">switch switch</command>
-    <result xml:space="preserve">You flipped the switch&#x000A;&gt;</result>
+    <command xml:space="preserve">randoor</command>
+    <result xml:space="preserve">Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, photograph and a sailboat here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <temporary score="0">NO</temporary>
     <children>
       <child nodeId="node-166"/>
     </children>
   </item>
   <item nodeId="node-166">
-    <command xml:space="preserve">flip switch</command>
-    <result xml:space="preserve">You flipped the switch&#x000A;&gt;</result>
+    <command xml:space="preserve">x photo</command>
+    <result xml:space="preserve">Scattered shreds of a ruined photograph are stuck to the floor&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>
@@ -1200,8 +1827,8 @@
     </children>
   </item>
   <item nodeId="node-167">
-    <command xml:space="preserve">look random door</command>
-    <result xml:space="preserve">Inscribed on the door is randoor&#x000A;&gt;</result>
+    <command xml:space="preserve">x switch</command>
+    <result xml:space="preserve">The switch is off&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>
@@ -1212,19 +1839,19 @@
   </item>
   <item nodeId="node-168">
     <command xml:space="preserve">randoor</command>
-    <result xml:space="preserve">Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, a photograph and a sailboat here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve">Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, a photograph and a sailboat here.&#x000A;&#x000A;&gt;</commentary>
+    <result xml:space="preserve">Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, photograph and a sailboat here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
     <played>YES</played>
-    <changed>YES</changed>
+    <changed>NO</changed>
     <temporary score="0">NO</temporary>
     <children>
       <child nodeId="node-169"/>
     </children>
   </item>
   <item nodeId="node-169">
-    <command xml:space="preserve">x bear</command>
-    <result xml:space="preserve">You see a dilapitated stuffed bear. Its white fluffiness is speckled with deep, reddish brown scabs. Its hollow eyes pierce you. &#x000A;You feel its stare boring a hole through your head. You feel its judgement, but no one belittles you and gets away with it. You steel your fists and bash its head in.  Crack. Your bloodied, gnarled hands ache.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve">You see a dilapitated stuffed bear. Its white fluffiness is speckled with deep, reddish brown scabs. Its hollow eyes pierce you. &#x000A;You feel its stare boring a hole through your head. You feel its judgement, but no one belittles you and gets away with it. You steel your fists and bash its head in.  Crack. Your bloodied, gnarled hands ache.&#x000A;&#x000A;&gt;</commentary>
+    <command xml:space="preserve">x photo</command>
+    <result xml:space="preserve">Your stomach growls as you yearn for the bread.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
@@ -1233,9 +1860,9 @@
     </children>
   </item>
   <item nodeId="node-170">
-    <command xml:space="preserve">x photo</command>
-    <result xml:space="preserve">You see a man surrounded by bookshelves sitting on a desk with mountains of papers--both coffee stained and gold-trimmed. His insiduous grin mocks your incompetence, yet you still feel respect for him. You want his acknowledgment as much as you want to destroy him. Instead, you take pleasure in ripping his image to shreds.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve">You see a man surrounded by bookshelves sitting on a desk with mountains of papers--both coffee stained and gold-trimmed. His insiduous grin mocks your incompetence, yet you still feel respect for him. You want his acknowledgment as much as you want to destroy him. Instead, you take pleasure in ripping his image to shreds.&#x000A;&#x000A;&gt;</commentary>
+    <command xml:space="preserve">x sail</command>
+    <result xml:space="preserve">The sailboat sails away on the back of festering dreams&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
@@ -1244,28 +1871,17 @@
     </children>
   </item>
   <item nodeId="node-171">
-    <command xml:space="preserve">x sail</command>
-    <result xml:space="preserve">You see a sailboat and reminisce on your dreams of escaping this dreary world.&#x000A;&#x000A;You uncovered a hidden switch and random door!&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve">You see a sailboat and reminisce on your dreams of escaping this dreary world.&#x000A;&#x000A;You uncovered a hidden switch and random door!&#x000A;&#x000A;&gt;</commentary>
+    <command xml:space="preserve">x switch</command>
+    <result xml:space="preserve">The switch is on&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
     <played>YES</played>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <temporary score="0">NO</temporary>
     <children>
       <child nodeId="node-172"/>
     </children>
   </item>
   <item nodeId="node-172">
-    <command xml:space="preserve">x switch</command>
-    <result xml:space="preserve">The switch is off&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-173"/>
-    </children>
-  </item>
-  <item nodeId="node-173">
     <command xml:space="preserve">hit switch</command>
     <result xml:space="preserve">You flipped the switch&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -1273,13 +1889,24 @@
     <changed>NO</changed>
     <temporary score="0">NO</temporary>
     <children>
+      <child nodeId="node-173"/>
+    </children>
+  </item>
+  <item nodeId="node-173">
+    <command xml:space="preserve">randoor</command>
+    <result xml:space="preserve">Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, photograph and a sailboat here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
       <child nodeId="node-174"/>
     </children>
   </item>
   <item nodeId="node-174">
-    <command xml:space="preserve">randoor</command>
-    <result xml:space="preserve">Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, photograph and a sailboat here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve">Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, photograph and a sailboat here.&#x000A;&#x000A;&gt;</commentary>
+    <command xml:space="preserve">x photo</command>
+    <result xml:space="preserve">Scattered shreds of a ruined photograph are stuck to the floor&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>
     <temporary score="0">NO</temporary>
@@ -1288,9 +1915,9 @@
     </children>
   </item>
   <item nodeId="node-175">
-    <command xml:space="preserve">x boat</command>
-    <result xml:space="preserve">You see a sailboat and reminisce on your dreams of escaping this dreary world.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve">You see a sailboat and reminisce on your dreams of escaping this dreary world.&#x000A;&#x000A;&gt;</commentary>
+    <command xml:space="preserve">x switch</command>
+    <result xml:space="preserve">The switch is off&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>
     <temporary score="0">NO</temporary>
@@ -1299,20 +1926,20 @@
     </children>
   </item>
   <item nodeId="node-176">
-    <command xml:space="preserve">x photo</command>
-    <result xml:space="preserve">You can almost taste the sweetly baked loaf of bread that you used to have, captured in this photo. But that taste is no longer yours since you've forsaken the maker of the loaves. You needed a baseline of self respect that was always diminished in her sickly charming ways. But the bread has no part in her machinations, and is left alone.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve">You can almost taste the sweetly baked loaf of bread that you used to have, captured in this photo. But that taste is no longer yours since you've forsaken the maker of the loaves. You needed a baseline of self respect that was always diminished in her sickly charming ways. But the bread has no part in her machinations, and is left alone.&#x000A;&#x000A;&gt;</commentary>
+    <command xml:space="preserve">flip switch</command>
+    <result xml:space="preserve">You flipped the switch&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
     <played>YES</played>
-    <changed>YES</changed>
+    <changed>NO</changed>
     <temporary score="0">NO</temporary>
     <children>
       <child nodeId="node-177"/>
     </children>
   </item>
   <item nodeId="node-177">
-    <command xml:space="preserve">x sail</command>
-    <result xml:space="preserve">The sailboat sails away on the back of festering dreams&#x000A;&gt;</result>
-    <commentary xml:space="preserve">The sailboat sails away on the back of festering dreams&#x000A;&gt;</commentary>
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>
     <temporary score="0">NO</temporary>
@@ -1321,9 +1948,9 @@
     </children>
   </item>
   <item nodeId="node-178">
-    <command xml:space="preserve">x bear</command>
-    <result xml:space="preserve">You see a dead bear. Its red fluffiness is speckled with deep, brownish white scabs. Its hollow eyes follow you throughout the room&#x000A;Your eyes are aching; the pain throbs with every step taken away from the bear. It slowly spreads down your face to your fists as your rage builds. You stab the bear in the chest with your damaged fist---you hear something break, but can't feel it. You pummel it again and again until you can feel something. The heart is saved for last.  Crunch. Crunch. Crunch.  Tasty.&#x000A;&#x000A;You uncovered a hidden switch and random door!&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve">You see a dead bear. Its red fluffiness is speckled with deep, brownish white scabs. Its hollow eyes follow you throughout the room&#x000A;Your eyes are aching; the pain throbs with every step taken away from the bear. It slowly spreads down your face to your fists as your rage builds. You stab the bear in the chest with your damaged fist---you hear something break, but can't feel it. You pummel it again and again until you can feel something. The heart is saved for last.  Crunch. Crunch. Crunch.  Tasty.&#x000A;&#x000A;You uncovered a hidden switch and random door!&#x000A;&#x000A;&gt;</commentary>
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
@@ -1332,30 +1959,30 @@
     </children>
   </item>
   <item nodeId="node-179">
-    <command xml:space="preserve">x switch</command>
-    <result xml:space="preserve">The switch is off&#x000A;&gt;</result>
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <temporary score="0">NO</temporary>
     <children>
       <child nodeId="node-180"/>
     </children>
   </item>
   <item nodeId="node-180">
-    <command xml:space="preserve">x switch</command>
-    <result xml:space="preserve">The switch is off&#x000A;&gt;</result>
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <temporary score="0">NO</temporary>
     <children>
       <child nodeId="node-181"/>
     </children>
   </item>
   <item nodeId="node-181">
-    <command xml:space="preserve">flip switch</command>
-    <result xml:space="preserve">You flipped the switch&#x000A;&gt;</result>
+    <command xml:space="preserve">ask about me</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>
@@ -1365,633 +1992,6 @@
     </children>
   </item>
   <item nodeId="node-182">
-    <command xml:space="preserve">flip switch</command>
-    <result xml:space="preserve">You flipped the switch&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-183"/>
-    </children>
-  </item>
-  <item nodeId="node-183">
-    <command xml:space="preserve">randoor</command>
-    <result xml:space="preserve">Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, photograph and a sailboat here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve">Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, photograph and a sailboat here.&#x000A;&#x000A;&gt;</commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-184"/>
-    </children>
-  </item>
-  <item nodeId="node-184">
-    <command xml:space="preserve">x door</command>
-    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-185"/>
-    </children>
-  </item>
-  <item nodeId="node-185">
-    <command xml:space="preserve">x random door</command>
-    <result xml:space="preserve">There is nothing here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-186"/>
-    </children>
-  </item>
-  <item nodeId="node-186">
-    <command xml:space="preserve">x switch</command>
-    <result xml:space="preserve">There is nothing here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-187"/>
-    </children>
-  </item>
-  <item nodeId="node-187">
-    <command xml:space="preserve">randoor</command>
-    <result xml:space="preserve">&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-188"/>
-    </children>
-  </item>
-  <item nodeId="node-188">
-    <command xml:space="preserve">x bear</command>
-    <result xml:space="preserve">You see a dead bear. As you inch closer to it, the bear's open maw snaps shut. Its hollow eyes pierce you.&#x000A;&#x000A;You feel its stare boring a hole in your empty chest. You don't need this. Your hands, still wet, reach into the Bear and pull its insides out. The eyes are saved for last.  Crunch. Crunch. Crunch.  Tasty.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve">You see a dead bear. As you inch closer to it, the bear's open maw snaps shut. Its hollow eyes pierce you.&#x000A;&#x000A;You feel its stare boring a hole in your empty chest. You don't need this. Your hands, still wet, reach into the Bear and pull its insides out. The eyes are saved for last.  Crunch. Crunch. Crunch.  Tasty.&#x000A;&#x000A;&gt;</commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-189"/>
-    </children>
-  </item>
-  <item nodeId="node-189">
-    <command xml:space="preserve">x switch</command>
-    <result xml:space="preserve">There is nothing here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-190"/>
-    </children>
-  </item>
-  <item nodeId="node-190">
-    <command xml:space="preserve">x photo</command>
-    <result xml:space="preserve">A swirl of movement cascades across the picture, like stop motion captured on one still. You love and regret and understand and forgive and still feel anger against fate and the whims of forces you cannot control. The moving body stays silently on the wall, proud in its withering defiance.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve">A swirl of movement cascades across the picture, like stop motion captured on one still. You love and regret and understand and forgive and still feel anger against fate and the whims of forces you cannot control. The moving body stays silently on the wall, proud in its withering defiance.&#x000A;&#x000A;&gt;</commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-191"/>
-    </children>
-  </item>
-  <item nodeId="node-191">
-    <command xml:space="preserve">randoor</command>
-    <result xml:space="preserve">&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-192"/>
-    </children>
-  </item>
-  <item nodeId="node-192">
-    <command xml:space="preserve">x photo</command>
-    <result xml:space="preserve">You can't bear to look away and you can't live with yourself staring at the photo on the wall.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-193"/>
-    </children>
-  </item>
-  <item nodeId="node-193">
-    <command xml:space="preserve">x switch</command>
-    <result xml:space="preserve">There is nothing here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-194"/>
-    </children>
-  </item>
-  <item nodeId="node-194">
-    <command xml:space="preserve">randoor</command>
-    <result xml:space="preserve">&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-195"/>
-    </children>
-  </item>
-  <item nodeId="node-195">
-    <command xml:space="preserve">x boat</command>
-    <result xml:space="preserve">You see a sailboat and reminisce on your dreams of escaping this dreary world.&#x000A;&#x000A;You uncovered a hidden switch and random door!&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve">You see a sailboat and reminisce on your dreams of escaping this dreary world.&#x000A;&#x000A;You uncovered a hidden switch and random door!&#x000A;&#x000A;&gt;</commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-196"/>
-    </children>
-  </item>
-  <item nodeId="node-196">
-    <command xml:space="preserve">x photo</command>
-    <result xml:space="preserve">You can't bear to look away and you can't live with yourself staring at the photo on the wall.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-197"/>
-    </children>
-  </item>
-  <item nodeId="node-197">
-    <command xml:space="preserve">x bear</command>
-    <result xml:space="preserve">You hate this bear.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-198"/>
-    </children>
-  </item>
-  <item nodeId="node-198">
-    <command xml:space="preserve">x switch</command>
-    <result xml:space="preserve">The switch is off&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-199"/>
-    </children>
-  </item>
-  <item nodeId="node-199">
-    <command xml:space="preserve">switch switch</command>
-    <result xml:space="preserve">You flipped the switch&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-200"/>
-    </children>
-  </item>
-  <item nodeId="node-200">
-    <command xml:space="preserve">randoor</command>
-    <result xml:space="preserve">Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, a photograph and a sailboat here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-201"/>
-    </children>
-  </item>
-  <item nodeId="node-201">
-    <command xml:space="preserve">x photo</command>
-    <result xml:space="preserve">Scattered shreds of a ruined photograph are stuck to the floor&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-202"/>
-    </children>
-  </item>
-  <item nodeId="node-202">
-    <command xml:space="preserve">x boat</command>
-    <result xml:space="preserve">On closer examination, you notice that the sailboat is made up of entirely different pieces. You wonder which piece was the original--or if it's even there at all.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-203"/>
-    </children>
-  </item>
-  <item nodeId="node-203">
-    <command xml:space="preserve">x switch</command>
-    <result xml:space="preserve">The switch is on&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-204"/>
-    </children>
-  </item>
-  <item nodeId="node-204">
-    <command xml:space="preserve">randoor</command>
-    <result xml:space="preserve">Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, photograph and a sailboat here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-205"/>
-    </children>
-  </item>
-  <item nodeId="node-205">
-    <command xml:space="preserve">x photo</command>
-    <result xml:space="preserve">Your stomach growls as you yearn for the bread.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-206"/>
-    </children>
-  </item>
-  <item nodeId="node-206">
-    <command xml:space="preserve">x boat</command>
-    <result xml:space="preserve">The sailboat sails away on the back of festering dreams&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-207"/>
-    </children>
-  </item>
-  <item nodeId="node-207">
-    <command xml:space="preserve">x switch</command>
-    <result xml:space="preserve">The switch is on&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-208"/>
-    </children>
-  </item>
-  <item nodeId="node-208">
-    <command xml:space="preserve">randoor</command>
-    <result xml:space="preserve">Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, photograph and a sailboat here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-209"/>
-    </children>
-  </item>
-  <item nodeId="node-209">
-    <command xml:space="preserve">x boat</command>
-    <result xml:space="preserve">On closer examination, you notice that the sailboat has the scars of spending most of its life inside a bottle. You feel yourself rooting for the little boat.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-210"/>
-    </children>
-  </item>
-  <item nodeId="node-210">
-    <command xml:space="preserve">x photo</command>
-    <result xml:space="preserve">Scattered shreds of a ruined photograph are stuck to the floor&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-211"/>
-    </children>
-  </item>
-  <item nodeId="node-211">
-    <command xml:space="preserve">x switch</command>
-    <result xml:space="preserve">The switch is off&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-212"/>
-    </children>
-  </item>
-  <item nodeId="node-212">
-    <command xml:space="preserve">randoor</command>
-    <result xml:space="preserve">Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, photograph and a sailboat here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-213"/>
-    </children>
-  </item>
-  <item nodeId="node-213">
-    <command xml:space="preserve">x photo</command>
-    <result xml:space="preserve">Your stomach growls as you yearn for the bread.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-214"/>
-    </children>
-  </item>
-  <item nodeId="node-214">
-    <command xml:space="preserve">x bear</command>
-    <result xml:space="preserve">You hate this bear.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-215"/>
-    </children>
-  </item>
-  <item nodeId="node-215">
-    <command xml:space="preserve">x sail</command>
-    <result xml:space="preserve">The sailboat sails away on the back of festering dreams&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-216"/>
-    </children>
-  </item>
-  <item nodeId="node-216">
-    <command xml:space="preserve">x switch</command>
-    <result xml:space="preserve">The switch is on&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-217"/>
-    </children>
-  </item>
-  <item nodeId="node-217">
-    <command xml:space="preserve">randoor</command>
-    <result xml:space="preserve">Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, photograph and a sailboat here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-218"/>
-    </children>
-  </item>
-  <item nodeId="node-218">
-    <command xml:space="preserve">x photo</command>
-    <result xml:space="preserve">You can't bear to look away and you can't live with yourself staring at the photo on the wall.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-219"/>
-    </children>
-  </item>
-  <item nodeId="node-219">
-    <command xml:space="preserve">x switch</command>
-    <result xml:space="preserve">The switch is on&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-220"/>
-    </children>
-  </item>
-  <item nodeId="node-220">
-    <command xml:space="preserve">x switch</command>
-    <result xml:space="preserve">The switch is on&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-221"/>
-    </children>
-  </item>
-  <item nodeId="node-221">
-    <command xml:space="preserve">flip switch</command>
-    <result xml:space="preserve">You flipped the switch&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-222"/>
-    </children>
-  </item>
-  <item nodeId="node-222">
-    <command xml:space="preserve">randoor</command>
-    <result xml:space="preserve">Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, photograph and a sailboat here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-223"/>
-    </children>
-  </item>
-  <item nodeId="node-223">
-    <command xml:space="preserve">x photo</command>
-    <result xml:space="preserve">Scattered shreds of a ruined photograph are stuck to the floor&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-224"/>
-    </children>
-  </item>
-  <item nodeId="node-224">
-    <command xml:space="preserve">x switch</command>
-    <result xml:space="preserve">The switch is off&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-225"/>
-    </children>
-  </item>
-  <item nodeId="node-225">
-    <command xml:space="preserve">randoor</command>
-    <result xml:space="preserve">Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, photograph and a sailboat here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-226"/>
-    </children>
-  </item>
-  <item nodeId="node-226">
-    <command xml:space="preserve">x photo</command>
-    <result xml:space="preserve">Your stomach growls as you yearn for the bread.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-227"/>
-    </children>
-  </item>
-  <item nodeId="node-227">
-    <command xml:space="preserve">x sail</command>
-    <result xml:space="preserve">The sailboat sails away on the back of festering dreams&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-228"/>
-    </children>
-  </item>
-  <item nodeId="node-228">
-    <command xml:space="preserve">x switch</command>
-    <result xml:space="preserve">The switch is on&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-229"/>
-    </children>
-  </item>
-  <item nodeId="node-229">
-    <command xml:space="preserve">hit switch</command>
-    <result xml:space="preserve">You flipped the switch&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-230"/>
-    </children>
-  </item>
-  <item nodeId="node-230">
-    <command xml:space="preserve">randoor</command>
-    <result xml:space="preserve">Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, photograph and a sailboat here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-231"/>
-    </children>
-  </item>
-  <item nodeId="node-231">
-    <command xml:space="preserve">x photo</command>
-    <result xml:space="preserve">Scattered shreds of a ruined photograph are stuck to the floor&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-232"/>
-    </children>
-  </item>
-  <item nodeId="node-232">
-    <command xml:space="preserve">x switch</command>
-    <result xml:space="preserve">The switch is off&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-233"/>
-    </children>
-  </item>
-  <item nodeId="node-233">
-    <command xml:space="preserve">flip switch</command>
-    <result xml:space="preserve">You flipped the switch&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-234"/>
-    </children>
-  </item>
-  <item nodeId="node-234">
-    <command xml:space="preserve">w</command>
-    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-235"/>
-    </children>
-  </item>
-  <item nodeId="node-235">
-    <command xml:space="preserve">n</command>
-    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-236"/>
-    </children>
-  </item>
-  <item nodeId="node-236">
-    <command xml:space="preserve">s</command>
-    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-237"/>
-    </children>
-  </item>
-  <item nodeId="node-237">
-    <command xml:space="preserve">e</command>
-    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-238"/>
-    </children>
-  </item>
-  <item nodeId="node-238">
-    <command xml:space="preserve">ask about me</command>
-    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">NO</temporary>
-    <children>
-      <child nodeId="node-239"/>
-    </children>
-  </item>
-  <item nodeId="node-239">
     <command xml:space="preserve">say "do you know me?'</command>
     <result xml:space="preserve">(to yourself)&#x000A;There is no reply.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve">(to the Cook)&#x000A;There is no reply.&#x000A;&#x000A;&gt;</commentary>
@@ -1999,7 +1999,7 @@
     <changed>YES</changed>
     <temporary score="0">NO</temporary>
   </item>
-  <item nodeId="node-157">
+  <item nodeId="node-183">
     <command xml:space="preserve">x bear</command>
     <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -2007,10 +2007,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-158"/>
+      <child nodeId="node-184"/>
     </children>
   </item>
-  <item nodeId="node-158">
+  <item nodeId="node-184">
     <command xml:space="preserve">x photo</command>
     <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -2018,7 +2018,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-145">
+  <item nodeId="node-185">
     <command xml:space="preserve">look bbox</command>
     <result xml:space="preserve">You see a screen labeled B-box with a keyboard next to the scratches. Its keyboard only has the alphabet and the digits 0 - 9. The screen pulsates with "WAITING FOR INPUT".&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -2026,10 +2026,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-146"/>
+      <child nodeId="node-186"/>
     </children>
   </item>
-  <item nodeId="node-146">
+  <item nodeId="node-186">
     <command xml:space="preserve">input 2 4 4</command>
     <result xml:space="preserve">The screen whirls for a few seconds, then outputs a series of digits. You recognize the output as 2 in base 4 converted to base 4:&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -2037,10 +2037,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-147"/>
+      <child nodeId="node-187"/>
     </children>
   </item>
-  <item nodeId="node-147">
+  <item nodeId="node-187">
     <command xml:space="preserve">input HELPME 34 1</command>
     <result xml:space="preserve">Incorrect Input&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -2048,10 +2048,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-148"/>
+      <child nodeId="node-188"/>
     </children>
   </item>
-  <item nodeId="node-148">
+  <item nodeId="node-188">
     <command xml:space="preserve">input O6O 23 30</command>
     <result xml:space="preserve">The screen whirls for a few seconds, then outputs a series of digits. You recognize the output as O6O in base 23 converted to base 30:&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -2059,10 +2059,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-149"/>
+      <child nodeId="node-189"/>
     </children>
   </item>
-  <item nodeId="node-149">
+  <item nodeId="node-189">
     <command xml:space="preserve">input HELPME 34 2</command>
     <result xml:space="preserve">The screen whirls for a few seconds, then outputs a series of digits. You recognize the output as HELPME in base 34 converted to base 2:&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -2070,10 +2070,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-150"/>
+      <child nodeId="node-190"/>
     </children>
   </item>
-  <item nodeId="node-150">
+  <item nodeId="node-190">
     <command xml:space="preserve">input HELPME 34 1</command>
     <result xml:space="preserve">Incorrect Input&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -2081,10 +2081,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-151"/>
+      <child nodeId="node-191"/>
     </children>
   </item>
-  <item nodeId="node-151">
+  <item nodeId="node-191">
     <command xml:space="preserve">type o6goceee 28 31</command>
     <result xml:space="preserve">The screen whirls for a few seconds, then outputs:&#x000A;     B&#x000A;     R&#x000A;     E&#x000A;     A&#x000A;     K&#x000A;     P&#x000A;     O&#x000A;     T&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -2092,10 +2092,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-152"/>
+      <child nodeId="node-192"/>
     </children>
   </item>
-  <item nodeId="node-152">
+  <item nodeId="node-192">
     <command xml:space="preserve">smash pot</command>
     <result xml:space="preserve">Violence isn't the answer to this one.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -2103,10 +2103,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-153"/>
+      <child nodeId="node-193"/>
     </children>
   </item>
-  <item nodeId="node-153">
+  <item nodeId="node-193">
     <command xml:space="preserve">break pot</command>
     <result xml:space="preserve">In the dusty, smoked-strewn room, amidst the broken pieces of a once intact thing, lies the pot's useless corpse. Was that really necessary?&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -2114,10 +2114,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-154"/>
+      <child nodeId="node-194"/>
     </children>
   </item>
-  <item nodeId="node-154">
+  <item nodeId="node-194">
     <command xml:space="preserve">check note</command>
     <result xml:space="preserve">+--------------------------------------+&#x000A; | Look for painting; Uifsf jt bo boomf. | &#x000A; |  baiting PantS                                        | &#x000A; |  maKe dOor                                           | &#x000A; +--------------------------------------+&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -2125,10 +2125,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-155"/>
+      <child nodeId="node-195"/>
     </children>
   </item>
-  <item nodeId="node-155">
+  <item nodeId="node-195">
     <command xml:space="preserve">i</command>
     <result xml:space="preserve">You are carrying nothing.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -2136,10 +2136,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-156"/>
+      <child nodeId="node-196"/>
     </children>
   </item>
-  <item nodeId="node-156">
+  <item nodeId="node-196">
     <command xml:space="preserve">make door</command>
     <result xml:space="preserve">An old, oak door materializes before you. You go through the door.&#x000A;&#x000A;As you enter the next room, you smell blood and taste the gnarling cacaphoney of a broken record. Splashes of dried blood cover the walls; everything in the room is sinking and stained. You see your hands. They are red to your wrists, and you can't remove it. You feel nausceous, and start hyperventilating. You struggle through dark spots and white flashes, eventually renouncing sight altogether. You trip on something squishy. You can't get up, and the squishyness is crawling up your leg. You wish you had your knife. You hate this. You hate this so much. You hate this enough to grab the thing and squeeze and squeeze until it cracks and you throw it against the bloody wall and walk over to it and stomp it to bits. You notice tiny globs emerging from the carcass and oozing towards you. You run back to the old door and open it. &#x000A;&#x000A;&#x000A;You can see an anger emotion here.&#x000A;&#x000A;Room&#x000A;As you enter the next room, you smell blood and taste the gnarling cacaphoney of a broken record. Splashes of dried blood cover the walls; everything in the room is sinking and stained.&#x000A;&#x000A;You can see a stuffed bear, a photographs and a sailboat here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -2147,7 +2147,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-115">
+  <item nodeId="node-197">
     <command xml:space="preserve">[enter]</command>
     <result xml:space="preserve">Room Wodplay or Surrealist project&#x000A;An Interactive Fiction by Avita, Chris &amp; Steph&#x000A;Release 1 / Serial number 161016 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Room&#x000A;You are in a room.&#x000A;&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -2155,7 +2155,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-116">
+  <item nodeId="node-198">
     <command xml:space="preserve"></command>
     <result xml:space="preserve">I beg your pardon?&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -2163,10 +2163,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-117"/>
+      <child nodeId="node-199"/>
     </children>
   </item>
-  <item nodeId="node-117">
+  <item nodeId="node-199">
     <command xml:space="preserve"></command>
     <result xml:space="preserve">I beg your pardon?&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -2174,10 +2174,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-118"/>
+      <child nodeId="node-200"/>
     </children>
   </item>
-  <item nodeId="node-118">
+  <item nodeId="node-200">
     <command xml:space="preserve"></command>
     <result xml:space="preserve">I beg your pardon?&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -2185,10 +2185,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-119"/>
+      <child nodeId="node-201"/>
     </children>
   </item>
-  <item nodeId="node-119">
+  <item nodeId="node-201">
     <command xml:space="preserve"></command>
     <result xml:space="preserve">I beg your pardon?&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -2196,10 +2196,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-120"/>
+      <child nodeId="node-202"/>
     </children>
   </item>
-  <item nodeId="node-120">
+  <item nodeId="node-202">
     <command xml:space="preserve"></command>
     <result xml:space="preserve">I beg your pardon?&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -2207,10 +2207,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-121"/>
+      <child nodeId="node-203"/>
     </children>
   </item>
-  <item nodeId="node-121">
+  <item nodeId="node-203">
     <command xml:space="preserve"></command>
     <result xml:space="preserve">I beg your pardon?&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>

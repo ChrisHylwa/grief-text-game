@@ -5,7 +5,7 @@
     <key>0</key><dict>
         <key>Filename</key><string>C:\Users\Neo\Documents\Inform\Projects\WordPlay.inform\Source\story.ni</string>
         <key>Line</key><integer>1</integer>
-        <key>Title</key><string>"Tower of Happiness" by Avita, Chris &amp; Steph</string>
+        <key>Title</key><string>"Tower of Happiness" by Avita Sharma, Chris Hylwa &amp; Stephanie Li</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
@@ -25,42 +25,42 @@
     </dict>
     <key>3</key><dict>
         <key>Filename</key><string>C:\Users\Neo\Documents\Inform\Projects\WordPlay.inform\Source\story.ni</string>
-        <key>Line</key><integer>29</integer>
+        <key>Line</key><integer>32</integer>
         <key>Title</key><string>Section 2 - Hidden and untakable Items</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>4</key><dict>
         <key>Filename</key><string>C:\Users\Neo\Documents\Inform\Projects\WordPlay.inform\Source\story.ni</string>
-        <key>Line</key><integer>73</integer>
+        <key>Line</key><integer>76</integer>
         <key>Title</key><string>Section 3 - Secret Doors ! ! !</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>5</key><dict>
         <key>Filename</key><string>C:\Users\Neo\Documents\Inform\Projects\WordPlay.inform\Source\story.ni</string>
-        <key>Line</key><integer>89</integer>
+        <key>Line</key><integer>92</integer>
         <key>Title</key><string>Section 4 - Base Converter (not really)</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>6</key><dict>
         <key>Filename</key><string>C:\Users\Neo\Documents\Inform\Projects\WordPlay.inform\Source\story.ni</string>
-        <key>Line</key><integer>151</integer>
+        <key>Line</key><integer>154</integer>
         <key>Title</key><string>Chapter 2 - Story</string>
         <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>7</key><dict>
         <key>Filename</key><string>C:\Users\Neo\Documents\Inform\Projects\WordPlay.inform\Source\story.ni</string>
-        <key>Line</key><integer>153</integer>
+        <key>Line</key><integer>156</integer>
         <key>Title</key><string>Section 1 - Denial Door and Puzzle setup</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>8</key><dict>
         <key>Filename</key><string>C:\Users\Neo\Documents\Inform\Projects\WordPlay.inform\Source\story.ni</string>
-        <key>Line</key><integer>305</integer>
+        <key>Line</key><integer>326</integer>
         <key>Title</key><string>Section 1 - Anger Room</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
@@ -975,66 +975,66 @@
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>139</key><dict>
+        <key>Filename</key><string>C:\Users\Neo\Documents\Inform\Extensions\emily short\glulx text effects.i7x</string>
+        <key>Line</key><integer>1</integer>
+        <key>Title</key><string>Version 5/150123 of Glulx Text Effects (for Glulx only) by Emily Short begins here</string>
+        <key>Level</key><integer>0</integer>
+        <key>Indentation</key><integer>0</integer>
+    </dict>
+    <key>140</key><dict>
+        <key>Filename</key><string>C:\Users\Neo\Documents\Inform\Extensions\emily short\glulx text effects.i7x</string>
+        <key>Line</key><integer>11</integer>
+        <key>Title</key><string>Chapter - Specifying styles</string>
+        <key>Level</key><integer>4</integer>
+        <key>Indentation</key><integer>1</integer>
+    </dict>
+    <key>141</key><dict>
+        <key>Filename</key><string>C:\Users\Neo\Documents\Inform\Extensions\emily short\glulx text effects.i7x</string>
+        <key>Line</key><integer>26</integer>
+        <key>Title</key><string>Section - The Table of User Styles definition</string>
+        <key>Level</key><integer>5</integer>
+        <key>Indentation</key><integer>2</integer>
+    </dict>
+    <key>142</key><dict>
+        <key>Filename</key><string>C:\Users\Neo\Documents\Inform\Extensions\emily short\glulx text effects.i7x</string>
+        <key>Line</key><integer>36</integer>
+        <key>Title</key><string>Chapter - Sorting the Table of User Styles</string>
+        <key>Level</key><integer>4</integer>
+        <key>Indentation</key><integer>1</integer>
+    </dict>
+    <key>143</key><dict>
+        <key>Filename</key><string>C:\Users\Neo\Documents\Inform\Extensions\emily short\glulx text effects.i7x</string>
+        <key>Line</key><integer>80</integer>
+        <key>Title</key><string>Chapter - Setting the styles - unindexed</string>
+        <key>Level</key><integer>4</integer>
+        <key>Indentation</key><integer>1</integer>
+    </dict>
+    <key>144</key><dict>
+        <key>Filename</key><string>C:\Users\Neo\Documents\Inform\Extensions\emily short\glulx text effects.i7x</string>
+        <key>Line</key><integer>188</integer>
+        <key>Title</key><string>Chapter - Additional style phrases</string>
+        <key>Level</key><integer>4</integer>
+        <key>Indentation</key><integer>1</integer>
+    </dict>
+    <key>145</key><dict>
         <key>Filename</key><string>C:\Users\Neo\Documents\Inform\Extensions\massimo stella\multiple sounds.i7x</string>
         <key>Line</key><integer>1</integer>
         <key>Title</key><string>Version 3 of Multiple Sounds by Massimo Stella begins here</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
-    <key>140</key><dict>
+    <key>146</key><dict>
         <key>Filename</key><string>C:\Users\Neo\Documents\Inform\Extensions\massimo stella\multiple sounds.i7x</string>
         <key>Line</key><integer>13</integer>
         <key>Title</key><string>Section - IF6 Code</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
-    <key>141</key><dict>
+    <key>147</key><dict>
         <key>Filename</key><string>C:\Users\Neo\Documents\Inform\Extensions\massimo stella\multiple sounds.i7x</string>
         <key>Line</key><integer>117</integer>
         <key>Title</key><string>Section - Declaring Commands</string>
         <key>Level</key><integer>5</integer>
-        <key>Indentation</key><integer>1</integer>
-    </dict>
-    <key>142</key><dict>
-        <key>Filename</key><string>C:\Program Files (x86)\Inform 7\Internal\Extensions\emily short\glulx text effects.i7x</string>
-        <key>Line</key><integer>1</integer>
-        <key>Title</key><string>Version 5/140516 of Glulx Text Effects (for Glulx only) by Emily Short begins here</string>
-        <key>Level</key><integer>0</integer>
-        <key>Indentation</key><integer>0</integer>
-    </dict>
-    <key>143</key><dict>
-        <key>Filename</key><string>C:\Program Files (x86)\Inform 7\Internal\Extensions\emily short\glulx text effects.i7x</string>
-        <key>Line</key><integer>11</integer>
-        <key>Title</key><string>Chapter - Specifying styles</string>
-        <key>Level</key><integer>4</integer>
-        <key>Indentation</key><integer>1</integer>
-    </dict>
-    <key>144</key><dict>
-        <key>Filename</key><string>C:\Program Files (x86)\Inform 7\Internal\Extensions\emily short\glulx text effects.i7x</string>
-        <key>Line</key><integer>26</integer>
-        <key>Title</key><string>Section - The Table of User Styles definition</string>
-        <key>Level</key><integer>5</integer>
-        <key>Indentation</key><integer>2</integer>
-    </dict>
-    <key>145</key><dict>
-        <key>Filename</key><string>C:\Program Files (x86)\Inform 7\Internal\Extensions\emily short\glulx text effects.i7x</string>
-        <key>Line</key><integer>36</integer>
-        <key>Title</key><string>Chapter - Sorting the Table of User Styles</string>
-        <key>Level</key><integer>4</integer>
-        <key>Indentation</key><integer>1</integer>
-    </dict>
-    <key>146</key><dict>
-        <key>Filename</key><string>C:\Program Files (x86)\Inform 7\Internal\Extensions\emily short\glulx text effects.i7x</string>
-        <key>Line</key><integer>80</integer>
-        <key>Title</key><string>Chapter - Setting the styles - unindexed</string>
-        <key>Level</key><integer>4</integer>
-        <key>Indentation</key><integer>1</integer>
-    </dict>
-    <key>147</key><dict>
-        <key>Filename</key><string>C:\Program Files (x86)\Inform 7\Internal\Extensions\emily short\glulx text effects.i7x</string>
-        <key>Line</key><integer>188</integer>
-        <key>Title</key><string>Chapter - Additional style phrases</string>
-        <key>Level</key><integer>4</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
 </dict></plist>
