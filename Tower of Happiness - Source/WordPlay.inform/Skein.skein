@@ -4,8 +4,8 @@
   <activeNode nodeId="node-1"/>
   <item nodeId="node-1">
     <command xml:space="preserve">- start -</command>
-    <result xml:space="preserve">Tower of Happiness&#x000A;An Interactive Fiction by Avita Sharma, Chris Hylwa &amp; Stephanie Li&#x000A;Release 1 / Serial number 161023 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Room&#x000A;You are in a room.&#x000A;&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
+    <result xml:space="preserve">Tower of Happiness&#x000A;An Interactive Fiction by Avita Sharma, Chris Hylwa &amp; Stephanie Li&#x000A;Release 1 / Serial number 161031 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Room&#x000A;You are in a room.&#x000A;&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">Tower of Happiness&#x000A;An Interactive Fiction by Avita Sharma, Chris Hylwa &amp; Stephanie Li&#x000A;Release 1 / Serial number 161026 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Room&#x000A;You are in a room.&#x000A;&#x000A;&#x000A;&gt;</commentary>
     <played>YES</played>
     <changed>NO</changed>
     <temporary score="0">NO</temporary>
@@ -310,10 +310,10 @@
   </item>
   <item nodeId="node-29">
     <command xml:space="preserve">look note</command>
-    <result xml:space="preserve">+--------------------------------------+&#x000A; | Look for painting; Uifsf jt bo boomf. | &#x000A; |                                                                 | &#x000A; | _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ | &#x000A; +--------------------------------------+&#x000A;&gt;</result>
+    <result xml:space="preserve">+--------------------------------------+&#x000A; | Look for painting; Uifsf jt bo boomf. | &#x000A; | _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ | &#x000A; | _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ | &#x000A; +--------------------------------------+&#x000A;&gt;</result>
     <commentary xml:space="preserve">+--------------------------------------+&#x000A; | Look for painting; Uifsf jt bo boomf. | &#x000A; |                                                                 | &#x000A; | _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ | &#x000A; +--------------------------------------+&#x000A;&gt;</commentary>
     <played>YES</played>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <temporary score="0">NO</temporary>
     <children>
       <child nodeId="node-30"/>
@@ -365,10 +365,10 @@
   </item>
   <item nodeId="node-34">
     <command xml:space="preserve">look apple</command>
-    <result xml:space="preserve">There is a juicy red apple shaped as a heart next to a warped pot. You want to take the heart-shaped apple. You trust that there are no worms hidden inside it.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You feel the dead weight of the apple in your pocket, dragging you closer to rock bottom.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve">There is a juicy red apple shaped as a heart next to a warped pot. You want to take the heart-shaped apple. You trust that there are no worms hidden inside it.&#x000A;&#x000A;&gt;</commentary>
     <played>YES</played>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <temporary score="0">NO</temporary>
     <children>
       <child nodeId="node-35"/>
@@ -376,10 +376,10 @@
   </item>
   <item nodeId="node-35">
     <command xml:space="preserve">put apple in pot</command>
-    <result xml:space="preserve">You crush the heart-apple in the pot. Smoke bellows outward, forming a shuddering tree. The wispy tree grows and grows until the air consumes it. You look into the pot, and a knife stares back at you.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You crush the heart-apple in the pot. Smoke bellows outward, forming a shuddering tree. The wispy tree grows and grows until it dissolves. You look into the pot, and a knife stares back at you.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve">You crush the heart-apple in the pot. Smoke bellows outward, forming a shuddering tree. The wispy tree grows and grows until the air consumes it. You look into the pot, and a knife stares back at you.&#x000A;&#x000A;&gt;</commentary>
     <played>YES</played>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <temporary score="0">NO</temporary>
     <children>
       <child nodeId="node-36"/>
@@ -476,14 +476,15 @@
   </item>
   <item nodeId="node-44">
     <command xml:space="preserve">make door</command>
-    <result xml:space="preserve">On the blank wall reveals an outline of a door. You press against it and feel it give, despite no hinge showing. You accept the existence of the door and go through, feeling yourself lifting upwards.&#x000A;&#x000A;Room&#x000A;As you enter the next room, you smell blood and taste the gnarling cacaphoney of a broken record. Splashes of dried blood cover the walls; everything in the room is sinking and stained. You see your hands. They are red to your wrists, and you can't remove it. You feel nausceous, and start hyperventilating. You struggle through dark spots and white flashes, eventually renouncing sight altogether. You trip on something squishy. You can't get up, and the squishyness is crawling up your leg. You wish you had your knife. You hate this. You hate this so much. You hate this enough to grab the thing and squeeze and squeeze until it cracks and you throw it against the bloody wall and walk over to it and stomp it to bits. You notice tiny globs emerging from the carcass and oozing towards you. You run back to the old door and open it, tears blotching your vision. &#x000A;&#x000A;&#x000A;Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, photograph and a sailboat here.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">On the blank wall reveals an outline of a door. You press against it and feel it give, despite no hinge showing. You accept the existence of the door and go through, feeling yourself lifting upwards.&#x000A;&#x000A;B-Enter Room&#x000A; As you arrive in the room, you feel like you've been drenched in water, even though you're completely dry. You shiver a little bit and look around, a rather plain and empty room surrounding you. The room starts slowly shaking; you stumble around, swaying to the rhythmic waves of motion. But like all fun things in your life, it ends--with no closure, and no chance of happening again.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve">On the blank wall reveals an outline of a door. You press against it and feel it give, despite no hinge showing. You accept the existence of the door and go through, feeling yourself lifting upwards.&#x000A;&#x000A;Room&#x000A;As you enter the next room, you smell blood and taste the gnarling cacaphoney of a broken record. Splashes of dried blood cover the walls; everything in the room is sinking and stained. You see your hands. They are red to your wrists, and you can't remove it. You feel nausceous, and start hyperventilating. You struggle through dark spots and white flashes, eventually renouncing sight altogether. You trip on something squishy. You can't get up, and the squishyness is crawling up your leg. You wish you had your knife. You hate this. You hate this so much. You hate this enough to grab the thing and squeeze and squeeze until it cracks and you throw it against the bloody wall and walk over to it and stomp it to bits. You notice tiny globs emerging from the carcass and oozing towards you. You run back to the old door and open it, tears blotching your vision. &#x000A;&#x000A;&#x000A;Room&#x000A;As you enter the next room, the air waftes with the sickening stench of gore, but you don't see any damage. The walls are bleached badly; you can still see the former jarring colors of dark oranges paired with limey greens and violets. The sticky carpet seems like it was once soft. You think that this room may have belonged to a child. You think that you've seen this room before...&#x000A;&#x000A;You can see a stuffed bear, photograph and a sailboat here.&#x000A;&#x000A;&gt;</commentary>
     <played>YES</played>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <temporary score="0">NO</temporary>
     <children>
       <child nodeId="node-45"/>
       <child nodeId="node-183"/>
+      <child nodeId="node-204"/>
     </children>
   </item>
   <item nodeId="node-45">
@@ -2018,6 +2019,14 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
+  <item nodeId="node-204">
+    <command xml:space="preserve">i</command>
+    <result xml:space="preserve">You are carrying nothing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
   <item nodeId="node-185">
     <command xml:space="preserve">look bbox</command>
     <result xml:space="preserve">You see a screen labeled B-box with a keyboard next to the scratches. Its keyboard only has the alphabet and the digits 0 - 9. The screen pulsates with "WAITING FOR INPUT".&#x000A;&#x000A;&gt;</result>
@@ -2200,17 +2209,6 @@
     </children>
   </item>
   <item nodeId="node-202">
-    <command xml:space="preserve"></command>
-    <result xml:space="preserve">I beg your pardon?&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="0">YES</temporary>
-    <children>
-      <child nodeId="node-203"/>
-    </children>
-  </item>
-  <item nodeId="node-203">
     <command xml:space="preserve"></command>
     <result xml:space="preserve">I beg your pardon?&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
