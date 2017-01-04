@@ -1,10 +1,13 @@
 "Tower of Happiness" by Avita Sharma, Chris Hylwa & Stephanie Li
 
 [TODO: add look descriptions for puzzle 3. Add background effects. Add more synonyms for dialogue.]
-
+[MAKE RANDOOR MORE OBVIOUS]
 Chapter 1 - Set-up
 
 Section 1 - Synonyms
+
+
+
 
 Include Glulx Text Effects by Emily Short.
 [Include Conversation Rules by Eric Eve.]
@@ -130,20 +133,85 @@ style name	justification	italic	indentation	first line indentation	font weight	c
 special-style-1	left-justified	false	15	15	bold-weight	"#000000"
 special-style-2	left-justified	false	0	0	regular-weight	"#FFFFFF"
 
+
+
+Table of Bases
+Letter (text)	Base (real number)		Str (text) 
+"0"	0		"0"
+"1"	1		"1"
+"2"	2		"2"
+"3"	3		"3"
+"4"	4		"4"
+"5"	5		"5"
+"6"	6		"6"
+"7"	7		"7"
+"8"	8		"8"
+"9"	9		"9"
+"A"	10		"10"
+"B"	11		"11"
+"C"	12		"12"
+"D"	13		"13"
+"E"	14		"14"
+"F"	15		"15"
+"G"	16		"16"
+"H"	17		"17"
+"I"	18		"18"
+"J"	19		"19"
+"K"	20		"20"
+"L"	21		"21"
+"M"	22		"22"
+"N"	23		"23"
+"O"	24		"24"
+"P"	25		"25"
+"Q"	26		"26"
+"R"	27		"27"
+"S"	28		"28"
+"T"	29		"29"
+"U"	30		"30"
+"V"	31		"31"
+"W"	32		"32"
+"X"	33		"33"
+"Y"	34		"34"
+"Z"	35		"35"
+--	36		"36"
+
+
+numbase is a real number that varies.
+numbase is 1.
+based is a real number that varies.
+based is 0.
+
 A input handling rule for a b-conv:
 	let N be indexed text;
 	let N be "[the topic understood]";
 	if N matches the regular expression "<a-zA-Z0-9>+ (<2-9>|<1-2><0-9>|3<0-6>) (<2-9>|<1-2><0-9>|3<0-6>)$":
 		let Num be word number 1 in N in upper case;
-		let mybase be word number 2 in N;
-		let newbase be word number 3 in N; 
+		let mybase be the Base corresponding to the Str of word number 2 in N in the Table of Bases;
+		let newbase be the Base corresponding to the Str of word number 3 in N in the Table of Bases;
 		if Num is "O6GOCEEE":
-			if mybase is "28":
-				if newbase is "31":
+			if mybase is 28:
+				if newbase is 31:
 					say "The screen whirls for a few seconds, then outputs:[line break]    [special-style-1]       
 						     B[line break]     R[line break]     E[line break]     A[line break]     K[line break]     P[line break]     O[line break]     T";
 					rule succeeds;
-		say "The screen whirls for a few seconds, then outputs a series of digits. You recognize the output as [Num] in base [mybase] converted to base [newbase].";
+					stop;
+		now numbase is 1;
+		now based is 0;
+		repeat with x running from 0 to number of characters in Num - 1:
+			let char be character number (number of characters in Num - x) in Num;
+			let int be the Base corresponding to a Letter of char in the Table of Bases;
+			let newdigit be int * numbase;
+			now numbase is numbase * mybase;
+			increase based by newdigit;
+		let newnum be a list of text;
+		while based > 0:
+			let rem be the remainder after dividing based by newbase;
+			let remchar be the Letter corresponding to the Base of rem in the Table of Bases;
+			now based is the floor of (based / newbase);
+			add remchar to newnum;
+		reverse newnum;
+		repeat with digit running through newnum:
+			say "[special-style-1][digit]";
 		rule succeeds;
 	otherwise if N matches the regular expression "(<a-zA-Z0-9>)+(\s\d+){2}$":
 		say "Out of Range";
@@ -153,6 +221,7 @@ A input handling rule for a b-conv:
 		rule fails;
 	say "Incorrect Input";
 	rule fails.
+
 	
 Section 5 - Asking 
 
@@ -729,6 +798,7 @@ Every turn:
 
 Chapter 3 - Bargaining
 
+[TODO: prevent the player from looking twice when they first enter]
 The B-Enter Room is a room. "[if the player is in the B-Enter for more than the first time]You feel salt caking on your cracked lips; hunger rumbling in your stomach. The room stands still.[otherwise]
 As you arrive in the room, showers of water drench you, but your skin's completely dry. You shiver a little bit and look around, a rather plain and empty room surrounds you. The room starts slowly shaking; you stumble around, swaying to the rhythmic waves of motion. A beat starts playing in the background in sync to the undulations of the waves and your own heart. You start to forget yourself, succumbing to the pulse of the ocean. But like all fun things in your life, it ends abruptly--with no closure, and no chance of happening again.[end if]"
 
@@ -745,7 +815,7 @@ The Mirrored Red Room is a room. "A room whose walls are a faded crimson. There'
 The Mirrored Blue Room is a room.  "A room whose walls are a unsettling cobalt. There's a faded crimson door to the north and a swirling veridian door to the west."
 The Mirrored Green Room is a room.  "A room whose walls are a overwhelming veridian. There's a cobalt door with cracked paint to the east, and a scratched mustard door to the north."
 The Mirrored Yellow Room is a room.  "A room whose walls are a sickening mustard. There's a faded crimson door to the east, and a swirling veridian door to the south."
-The Altar is a room. "A graywashed room whose walls look closer to stone than all the other rooms you've been in. An altar dedicated to no deity consumes the room. A glinting gold ring appears to be the only offering. " 
+The Altar is a room. "A graywashed room whose walls look closer to stone than all the other rooms you've been in. An altar dedicated to no deity consumes the room.[if the gold ring is in the Altar] A glinting gold ring appears to be the only offering. " 
 
 The table is untakable in the Altar. Understand "altar" as table. "Four slabs of stone haphazardly thrown together form the altar, each with a diamond slot at the top.[if the gold ring is in the Altar] There's a gold ring at
 the base of the stones.[otherwise if the red slot is empty and the yellow slot is empty and the blue slot is empty and the green slot is empty] The stones beckon you to fill their emptiness.[otherwise if the red slot contains the ruby and the blue slot contains the sapphire and the yellow slot contains the topaz and the green slot contains the emerald] The shards glow together, blinding your eyes.[otherwise] The gems want more friends to join them in their repose." 
@@ -912,7 +982,7 @@ Instead of giving the Wine bottle to the Author:
 	move the Ruby Shard to the Red Room;
 	say "The red gem shard falls to the ground as the Author reaches out and grabs the wine bottle. He takes a long draught before looking up at you. 'Heh. Thanks, sport. Always could count on you. Now then, wadd[']ya want?"
 
-The Beautician is a person in the Green Room. The Beautician is carrying the Emerald Shard. "[if the player is in the green room for the first time]Your old beautician is standing next to a hair-dressing station, looking dour as usual. She's a world-weary, dangerously thin woman, wielding a pair of blindingly razor sharp scissors. As she hears your footsteps, she smothers a shocked expression before breaking into an almost grin. 'Heh. Never thought I'd see your mug again, not after... You're not forgiven, and as I suspect, neither am I. So leave. We have nothing more to say to each other, not anymore.[otherwise]The Beautician's mouth twitches upwards and spits out, 'You're here again. Leave before I make you.'
+The Beautician is a person in the Green Room. The Beautician is carrying the Emerald Shard. "[if the player is in the green room for the first time]Your old beautician is standing next to a hair-dressing station, looking dour as usual. She's a world-weary, dangerously thin woman, wielding a pair of blindingly razor sharp scissors. As she hears your footsteps, she smothers a shocked expression before breaking into an almost grin. 'Heh. Never thought I'd see your mug again, not after... You're not forgiven, and as I suspect, neither am I. So leave. We have nothing more to say to each other, not anymore'.[otherwise]The Beautician's mouth twitches upwards and spits out, 'You're here again. Leave before I make you.'
 
    The Beautician flings a pair of scizzors at you; they embed themselves in the wall an inch from your face."
 
@@ -981,7 +1051,7 @@ Instead of giving the gold ring to the Beautician:
 		move the Emerald Shard to the player;
 		say "The Beautician darkly smiles. 'Of course it's this that carves an inkling of regret and forgiveness in my veins...but I can't, you know that. Let us be done after this.' As the Beautician drops the scarred green shard into your outstretched palm, her sleeve rides up and you see the wires sustaining her existence. Despite your pain and good sense, you still wish desperately that she was real. "		
 
-The Cook is a person in the Blue Room. The Cook is carrying the wine bottle. "[if the player is in the Blue room for the first time]It's the Cook who made the captured bread. A jovial, chubby, woman, wearing an apron and a pristine souz-chef hat. She stands next to a bottle of wine of indeterminate origin. Upon noticing you, she sounds a hearty chuckle. 'Well, hello dear! Fancy seein['] you back after stormin['] off in that dramatic nonsense of yours. Knew you'd be back, though. You always come back to me, don't you dearie? Now come closer, I've just been whippin['] up your favorite dish! Missn['] somethin['] though, can't remember what...always missin['] somethin[']...'[line break][line break]You know better than to trust her fake warmth and can now see her web of manipulations starting to tangle you inwards. You keep your distance; you plead internally to garner the strength to resist.[otherwise]The Cook brightens,'Ah, dearie! you've come back to me! A bit too soon, I'm afraid I haven't figured out how to lock these doors. Help me, would you dear? Stay here.'[paragraph break]The Cook is moving the giant bottle of wine in front of the door, to barricade you inside."
+The Cook is a person in the Blue Room. The Cook is carrying the wine bottle. "[if the player is in the Blue room for the first time]It's the Cook who made the captured bread. A jovial, chubby, woman, wearing an apron and a pristine souz-chef hat. She stands next to a bottle of wine of indeterminate origin. Upon noticing you, she sounds a hearty chuckle. 'Well, hello dear! Fancy seein['] you back after stormin['] off in that dramatic nonsense of yours. Knew you'd be back, though. You always come back to me, don't you dearie? Now come closer, I've just been whippin['] up your favorite dish! Missn['] somethin['] though, can't remember what...always missin['] somethin[']...'[line break][line break]You know better than to trust her fake warmth and can now see her web of manipulations starting to tangle you inwards. You keep your distance; you plead internally to garner the strength to resist.[otherwise if the Cook has the wine] ADD A DESCRIPTION HERE!!![otherwise]The Cook brightens,'Ah, dearie! you've come back to me! A bit too soon, I'm afraid I haven't figured out how to lock these doors. Help me, would you dear? Stay here.'[paragraph break]The Cook is moving the giant bottle of wine in front of the door, to barricade you inside."
 Understand "The cook" or "cook" or "her" or "cooking" as "[The Cook]"
 
 Instead of examining the wine bottle:
